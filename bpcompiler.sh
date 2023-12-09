@@ -2,14 +2,14 @@
 
 # Check if the number of arguments is correct
 if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <path_to_shell_script>"
+    echo "Usage: $0 <path_to_file>"
     exit 1
 fi
 
 # File to be copied
 file_to_copy="blackpard_src.sh"
 
-# Shell script to be executed
+# Shell script file to be renamed and executed
 shell_script="$1"
 
 # Get the directory of the passed shell script argument
@@ -30,15 +30,23 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Execute the shell script passed as an argument
-"$shell_script"
+# Get the filename without extension
+filename=$(basename "$shell_script" ".${shell_script##*.}")
 
-# After executing the shell script, delete the copied file
+# Rename the file to have ".sh" extension
+mv "$shell_script" "$destination_directory/$filename.sh"
+
+# Execute the renamed shell file
+"$destination_directory/$filename.sh"
+
+# After executing the shell file, delete the copied file and rename back to original extension
 rm "$destination_directory/$file_to_copy"
+mv "$destination_directory/$filename.sh" "$destination_directory/$filename.${file_to_copy##*.}"
 
-# Check if the deletion was successful
+# Check if operations were successful
 if [ $? -eq 0 ]; then
     echo "File '$file_to_copy' deleted from '$destination_directory'."
+    echo "File '$filename.sh' renamed to '$filename.${file_to_copy##*.}'"
 else
-    echo "There was an error deleting the file '$file_to_copy' from '$destination_directory'."
+    echo "There was an error performing operations in '$destination_directory'."
 fi
