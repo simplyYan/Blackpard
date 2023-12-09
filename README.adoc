@@ -15,11 +15,11 @@ Blackpard is a lightweight programming language designed to provide a simple scr
 
 - macOS and Linux:
 1. Download the dependencies using `curl`:
-   [source,shell]
-   ----
+[source,shell]
+----
    curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/compiler.sh
    curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/linux/blackpard_src.sh
-   ----
+----
 
 2. The installation is complete. You can now start using Blackpard. For instructions on how to use it, refer to the documentation.
 
