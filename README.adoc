@@ -1,0 +1,40 @@
+= Blackpard
+
+== Description
+
+Blackpard is a lightweight programming language designed to provide a simple scripting experience in a Shell environment. It offers basic functionalities such as variable handling, function creation, and conditional statements.
+
+== Features
+
+- Simple variable handling with `vlu`
+- Definition of constants using `static`
+- Function creation with `action`
+- Basic conditional statements with `maybe`
+
+== Installation
+
+- macOS and Linux:
+1. Download the dependencies using `curl`:
+   [source,shell]
+   ----
+   curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/compiler.sh
+   curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/linux/blackpard_src.sh
+   ----
+
+2. The installation is complete. You can now start using Blackpard. For instructions on how to use it, refer to the documentation.
+
+== Contributing
+
+Contributions to Blackpard are welcomed! If you'd like to contribute:
+1. Fork the repository.
+2. Make your changes.
+3. Open a pull request describing the changes you've made.
+
+== License
+
+Blackpard is licensed under the BSD 3-Clause License. See the [LICENSE](link-to-license) file for more details.
+
+== Support
+
+For support, issues, or feature requests, please visit the [GitHub repository](https://github.com/simplyYan/Blackpard).
+
