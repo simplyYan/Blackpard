@@ -4,7 +4,7 @@ Blackpard is a multi-paradigm programming language focused on speed, security an
 - macOS and Linux:
 1. Download the dependencies using `curl`:
 ```
-curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/compiler.sh
+curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/bpcompiler.sh
 curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/linux/blackpard_src.sh
 ```
 *To download Blackpard you must be in the terminal's home directory
