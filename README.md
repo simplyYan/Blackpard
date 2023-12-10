@@ -7,7 +7,7 @@ Blackpard is a multi-paradigm programming language focused on speed, security an
 curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/bpcompiler.sh
 curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/linux/blackpard_src.sh
 ```
-*To download Blackpard you must be in the terminal's home directory
+*To download Blackpard you must be in the terminal's home directory. You may need to grant permission for the language. To do this, use the command: `chmod 777 blackpard_src.sh"` and then the command `chmod 777 bpcompiler.sh`.
 
 2. The installation is complete. You can now start using Blackpard. For instructions on how to use it, refer to the documentation.
 - Windows:
