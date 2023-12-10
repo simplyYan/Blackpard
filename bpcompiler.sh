@@ -1,52 +1,22 @@
 #!/bin/bash
 
-# Check if the number of arguments is correct
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <path_to_file>"
-    exit 1
-fi
+# Get the directory and filename from the argument
+dir=$(dirname "$1")
+filename=$(basename "$1")
+base="${filename%.*}"
+ext="${filename##*.}"
 
-# File to be copied
-file_to_copy="blackpard_src.sh"
+# Copy the predefined file to the target directory
+cp blackpard_src.sh "$dir"
 
-# Shell script file to be renamed and executed
-shell_script="$1"
+# Rename the extension of the target file to .sh
+mv "$dir/$filename" "$dir/$base.sh"
 
-# Get the directory of the passed shell script argument
-destination_directory=$(dirname "$shell_script")
+# Execute the shell script
+bash "$dir/$base.sh"
 
-# Check if the destination directory exists
-if [ ! -d "$destination_directory" ]; then
-    echo "Destination directory not found: $destination_directory"
-    exit 1
-fi
+# Remove the copied file
+rm "$dir/blackpard_src.sh"
 
-# Copy the file to the destination directory
-cp "$file_to_copy" "$destination_directory"
-
-# Check if the copy was successful
-if [ $? -ne 0 ]; then
-    echo "There was an error copying the file '$file_to_copy' to '$destination_directory'."
-    exit 1
-fi
-
-# Get the filename without extension
-filename=$(basename "$shell_script" ".${shell_script##*.}")
-
-# Rename the file to have ".sh" extension
-mv "$shell_script" "$destination_directory/$filename.sh"
-
-# Execute the renamed shell file
-"$destination_directory/$filename.sh"
-
-# After executing the shell file, delete the copied file and rename back to original extension
-rm "$destination_directory/$file_to_copy"
-mv "$destination_directory/$filename.sh" "$destination_directory/$filename.${file_to_copy##*.}"
-
-# Check if operations were successful
-if [ $? -eq 0 ]; then
-    echo "File '$file_to_copy' deleted from '$destination_directory'."
-    echo "File '$filename.sh' renamed to '$filename.${file_to_copy##*.}'"
-else
-    echo "There was an error performing operations in '$destination_directory'."
-fi
+# Rename the extension of the executed file back to its original
+mv "$dir/$base.sh" "$dir/$base.$ext"
