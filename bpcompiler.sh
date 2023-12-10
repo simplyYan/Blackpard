@@ -1,22 +1,31 @@
 #!/bin/bash
 
-# Get the directory and filename from the argument
-dir=$(dirname "$1")
-filename=$(basename "$1")
-base="${filename%.*}"
-ext="${filename##*.}"
+# O arquivo pré-definido
+src_file="blackpard_src.sh"
 
-# Copy the predefined file to the target directory
-cp blackpard_src.sh "$dir"
+# O arquivo e diretório de destino
+dest_file_path=$1
+dest_dir=$(dirname "$dest_file_path")
+dest_file=$(basename "$dest_file_path")
 
-# Rename the extension of the target file to .sh
-mv "$dir/$filename" "$dir/$base.sh"
+# Salva a extensão original do arquivo
+original_extension="${dest_file##*.}"
 
-# Execute the shell script
-bash "$dir/$base.sh"
+# Renomeia o arquivo de destino para .sh
+dest_file_base="${dest_file%.*}"
+dest_sh="$dest_dir/$dest_file_base.sh"
 
-# Remove the copied file
-rm "$dir/blackpard_src.sh"
+# Copia o arquivo src para o diretório de destino
+cp $src_file $dest_dir
 
-# Rename the extension of the executed file back to its original
-mv "$dir/$base.sh" "$dir/$base.$ext"
+# Renomeia o arquivo de destino para .sh
+mv $dest_file_path $dest_sh
+
+# Executa o arquivo .sh
+bash $dest_sh
+
+# Remove o arquivo src copiado
+rm "$dest_dir/$src_file"
+
+# Renomeia o arquivo .sh de volta para a extensão original
+mv $dest_sh $dest_file_path
