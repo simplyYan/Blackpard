@@ -1,61 +1,39 @@
-Blackpard is a multi-paradigm programming language focused on speed, security and flexibility. Blackpard's goal is to be flexible, and compatible with any device on most operating systems. Currently, our language is compatible with Windows, Linux, and macOS. The Blackpard language is mostly used for the back-end, but it has quality front-end frameworks.
+Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
 ## How to install
-- macOS and Linux:
-1. Download the dependencies using `curl`:
-```
-curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/bpcompiler.sh
-curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/linux/blackpard_src.sh
-```
-*To download Blackpard you must be in the terminal's home directory. You may need to grant permission for the language. To do this, use the command: `chmod 777 blackpard_src.sh` and then the command `chmod 777 bpcompiler.sh`.
+Blackpard can be installed using third-party mirrors such as Google Drive and Mediafire. 
+See:
+- Google Drive: https://drive.google.com/drive/folders/1pfL5IzATpMqjFzNW7gZzVyAVBzXo5WT8?usp=sharing
 
-2. The installation is complete. You can now start using Blackpard. For instructions on how to use it, refer to the documentation.
-- Windows:
-To install Blackpard for Windows, the process is a little different, and requires an extra dependency. You'll need Cygwin to run Blackpard code.
-Here are the steps:
-1. install Cygwin (https://www.cygwin.com/install.html)
+- Mediafire: ???
 
-2. In the standard Windows terminal, download Blackpard using the commands:
-```
-curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/compiler.sh
-curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/linux/blackpard_src.sh
-```
-*To download Blackpard you must be in the terminal's home directory
+## Documentation
+You can access the documentation on the Blackpard Wiki.
 
-3. That's it. You can now use Blackpard, but it will only work in the Cygwin terminal. Commands and code must always be run in Cygwin, including running Blackpard code using "bpcompiler".
+## Main features:
 
-- Android:
-Blackpard is also compatible with Android, but it's still in the testing phase. You can use Termux for this. You can download the original version of Termux from bpardDep. Here's the step-by-step guide:
+- Cross-platform: Our language is compatible with Windows, Linux and macOS;
 
-1. Download Termux from bpardDep by [clicking here](https://drive.google.com/drive/folders/1Vd9SL-mHOZTRyFEqJuAFV3nAEAXSYJpo?usp=sharing).
+- Runs on a VM: Blackpard runs entirely on BlackpardVM, the language's virtual machine. Using the Blackpard language, you can manipulate everything from BlackpardVM, which is almost an operating system. You can manipulate files, the terminal, and much more.
 
-2. Download Blackpard in the Termux terminal using the command:
-```
-curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/compiler.sh
-curl -O https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/linux/blackpard_src.sh
-```
+- Strongly typed: Blackpard's speed is due to many language features, one of which is typing. 
 
-3. That's it! You can now use Blackpard through Termux.
+- Extremely easy: Blackpard is very easy, and quick to learn.
 
-Note: Termux is not an app developed by me, and the version provided is original and free.
+- Native tools: Our language has a variety of built-in tools, which can help a lot! Some of these tools are: Scraping, Cryptography, Mathematics, Machine Learning, Audio Manipulation, Video Manipulation, Image Manipulation, String Manipulation, and much more!
 
-## 🎯 Main Features
+- Fast: Blackpard is insanely fast and optimized.
 
-- Broad: Blackpard is widely used in many areas such as: hacking, back-end, security, internet engineering.
+- In-house compiler: The magic behind Blackpard is also due to the efficient and modern compiler.
 
-- Portable: Our language is so lightweight that in addition to Windows, macOS and Linux, it is fully compatible with Raspberry Pi, and works perfectly on that platform, especially Raspbian. What's more, Blackpard is even compatible with Android.
+- Proprietary IDE: Blackpard has an IDE exclusively dedicated to our language.
 
-- Lightweight: Blackpard is extremely lightweight, which makes it perfect for any project.
+- Open-source: Our language is open-source and is licensed under BSD-CLAUSE 3.
 
-- Fast: Being lightweight and built mainly with Shell, Blackpard is incredibly fast, being one of the fastest languages on the market.
+## License
+Blackpard is licensed under BSD-CLAUSE 3. Before modifying or using it, it is recommended that you read the license.
 
-- Cross-platform: Our language is supported by Windows, Linux, and macOS.
+## Contribute
+You can contribute by opening a pull-request and improving, correcting or adding features.
 
-## 📖 Documentation
-You can read the Blackpard documentation on the Wiki. It's easy to understand and has basic examples.
-
-## ⚖️ License
-Blackpard is open-source and is licensed under BSD-CLAUSE 3. It is highly recommended that you read the license before using or modifying it.
-
-## ⚡ How to contribute
-Anyone can contribute to Blackpard.You can open a pull-request, improve, fix or add features.Help us build this insane language.
+> A project founded by Wesley Yan Soares Brehmer
