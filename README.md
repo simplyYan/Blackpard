@@ -7,6 +7,11 @@ See:
 
 - Mediafire: ???
 
+## IDE
+Blackpard has its own IDE, called "Whitepard", which can be used online in the browser! To access the IDE, [click here](https://simplyyan.github.io/Whitepard/root/) or go to:
+```
+https://simplyyan.github.io/Whitepard/root/
+```
 ## Documentation
 You can access the documentation on the Blackpard Wiki.
 
