@@ -1,9 +1,3 @@
-from fastapi import FastAPI, Path, Query, HTTPException, Request, Form, Depends
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
-from typing import Optional
 import wafw00f
 import warnings
 import wasabi
@@ -136,8 +130,11 @@ import numpy
 import magic
 import math
 from numba import njit
-from py_mini_racer import py_mini_racer
 
+def runCode(filename):
+    filer = os.open(filename, 'r')
+    filer_content = os.read(filer)
+    exec(filer_content)
 
 def compil(filename):
     with open(filename, 'r') as file:
@@ -165,10 +162,8 @@ def compil(filename):
         comm = extends.replace('//', '#')
         classcfg = comm.replace('class.struct(', 'def __init__(self, ')
         maybe = classcfg.replace('maybe', 'elif')
-        reffer = maybe.replace('@(', 'ref(')
-        const = reffer.replace('.const(', '.setv(')
-        bpctx = const.replace('blackpard.context(!)', '(@&¨@)Blackpard.LANG')
-        skip = bpctx.replace('skip', 'pass')
+        skip = maybe.replace('skip', 'pass')
+        jit = skip.replace('@jitpard', '@njit')
 
 # Nome do arquivo que você quer criar
         nome_arquivo = filename + ".py"
@@ -183,22 +178,10 @@ def compil(filename):
                 arquivo.write(conteudo)
     
             print(f"File '{nome_arquivo}' was created successfully.")
-            with open(nome_arquivo, 'r') as file:
-                code = file.read()
-                exec(code)
+            runCode(nome_arquivo)
 
         except Exception as e:
             print(f"An error occurred: {e}")
-
-ctx = py_mini_racer.MiniRacer()
-
-@njit
-def setv(key, value):
-    ctx.eval(f"const '{key}' = '{value}';")
-
-@njit
-def ref(key):
-    return ctx.eval(f"'{key}';")
 
 @njit
 def extender(filee):
