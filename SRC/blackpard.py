@@ -168,6 +168,7 @@ def compil(filename):
         reffer = maybe.replace('@(', 'ref(')
         const = reffer.replace('.const(', '.setv(')
         bpctx = const.replace('blackpard.context(!)', '(@&¨@)Blackpard.LANG')
+        skip = bpctx.replace('skip', 'pass')
 
 # Nome do arquivo que você quer criar
         nome_arquivo = filename + ".py"
