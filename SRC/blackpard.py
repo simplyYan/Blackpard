@@ -1,212 +1,19 @@
-import wafw00f
-import warnings
-import wasabi
-import wave
-import weakref
-import webbrowser as browser
-import websocket
-from easyprocess import EasyProcess
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-from email import encoders
-import enchant as strutil
-import errno
-import exifread
-import random
-import re
-import readline
-import reportbug
-import requests
-import routes
-import tabnanny
-import tabulate
-import tarfile
-import tempfile
-import termcolor
-import textdistance
-import textwrap
-import threading
-import time
-import tkinter as ui
-import token
-import yaml
-import usb.core
-import uuid
-import uvicorn
-import serial
-import uno
-import urllib
-import idna
-import imageio
-import inspect
-import instaloader
-import invoke
-import io
-import ipaddress
-import ipwhois
-import oauthlib
-import opcode
-import operator
 import os
-import p2pnetwork
-import packaging
-import passlib
-import pkginfo
-import pkgutil
-import platform
-import pluginbase
-import pycurl as adreq
-import abc
-import array
-import asyncore
-import atexit as onexit
-import apt
-import safetensors
-import scanext
-import secrets
-import select
-import shutil
-import signal
-import simplejson
-import socket
-import statistics
-import sys
-import subprocess
-import sqlalchemy
-import sqlite3
-import dataclasses
-import datetime
-import decimal
-import dns
-import fabric
-import flasgger
-import filelock
-import ftplib
-import fuzzywuzzy
-import future
-import functools
-import gast
-import genericpath
-import gettext
-import gc
-import glob
-import grpc
-import gzip
-import hashlib
-import html
-import http
-import hyperframe
-import jwt
-import json
-import keyword
-import langcodes
-import lzma
-import logging
-import locale
-import zipapp
-import zipfile
-import zipimport
-import zlib
-import xml
-import cachetools
-import calendar
-import cgi
-import clang
-import click
-import cmath
-import cmd
-import cryptography
-import csv
-import curl
-import validate
-import vboxapi
-import base64
-import bcrypt
-import binascii
-import numbers
-import numpy
-import magic
-import math
 from numba import njit
-
-def runCode(filename):
-    filer = os.open(filename, 'r')
-    filer_content = os.read(filer)
-    exec(filer_content)
-
-def compil(filename):
-    with open(filename, 'r') as file:
-        content = file.read()
-        # Start of the transpilation and code adaptation session
-        action = content.replace("action", "def")
-        echo = action.replace("echo", "print")
-        router = echo.replace("require(web)", "web = FastAPI()")
-        routerlis = router.replace("web.Listen(", "uvicorn.run(")
-        onready = routerlis.replace('@onready:', 'if __name__ == "__main__":')
-        get = onready.replace("web.Get(", "requests.get(")
-        post = get.replace("web.Post(", "requests.post(")
-        httperror = post.replace("web.Error(", "requests.HTTPError")
-        logger_err = httperror.replace("logger.Warn(", "warnings.warn(")
-        logger_ignore = logger_err.replace('logger.Mode("ignore")', 'warnings.filterwarnings("ignore")')
-        logger_def = logger_ignore.replace('logger.Mode("default")', 'warnings.filterwarnings("default")')
-        req_term = logger_def.replace('require(term)', 'term = Printer()')
-        strvar = req_term.replace('.string ', '')
-        intvar = strvar.replace('.int ', '')    
-        floatvar = intvar.replace('.float ', '')
-        boolvar = floatvar.replace('.bool ', '')      
-        termexec = boolvar.replace('term.Run([', 'EasyProcess([') 
-        dic = termexec.replace('require(dic).lang(', 'dic = enchant.Dict(')   
-        extends = dic.replace('extends(', 'extender(')    
-        comm = extends.replace('//', '#')
-        classcfg = comm.replace('class.struct(', 'def __init__(self, ')
-        maybe = classcfg.replace('maybe', 'elif')
-        skip = maybe.replace('skip', 'pass')
-        jit = skip.replace('@jitpard', '@njit')
-
-# Nome do arquivo que você quer criar
-        nome_arquivo = filename + ".py"
-
-# Conteúdo que você quer escrever no arquivo
-        conteudo = classcfg
-
-        try:
-    # Abre o arquivo no modo de escrita ('w')
-            with open(nome_arquivo, 'w') as arquivo:
-        # Escreve o conteúdo no arquivo
-                arquivo.write(conteudo)
-    
-            print(f"File '{nome_arquivo}' was created successfully.")
-            runCode(nome_arquivo)
-
-        except Exception as e:
-            print(f"An error occurred: {e}")
-
-@njit
-def extender(filee):
-    ext = os.open(filee, 'r')   
-    content = ext.read()
-    try:
-        with open(content, 'r') as arquivo:
-        # Lê cada linha do arquivo
-            for linha in arquivo:
-            # Verifica se a palavra procurada está na linha
-                if "(@&¨@)Blackpard.LANG" in linha:
-                    encontrada = True
-                    break  # Se encontrou a palavra, podemos parar de procurar
-
-        if encontrada:
-            compil(filee)
-        else:
-            print(f"The code isent compiled")
-
-    except FileNotFoundError:
-        print(f"The file '{filee}' was not found.")
-    except Exception as e:
-        print(f"Ocorreu um erro: {e}")
-
-
+import execjs
+import requests
+import shutil
+import sys
+import matx
+import scrapy as web
+import tkinter as ui
+import sqlalchemy as db
+from bs4 import BeautifulSoup as web
+import scipy as sci
+import sklearn as maplot
+import serial
+import subprocess
+import webbrowser
 
 # Verifica se o arquivo "index.tea" existe
 arquivo_index = "index.tea"
@@ -218,14 +25,173 @@ if os.path.exists(arquivo_index):
     # Executa o código Python do arquivo "index.tea" se houver algum conteúdo
     if codigo_python.strip():
         try:
-            exec(codigo_python)
-            print(f"Executando código Python do arquivo '{arquivo_index}'")
+            with open(codigo_python, "r") as arquivo2:
+                rslt = arquivo2.read()
+            exec(rslt)
+            print(f"Running Blackpard code from file '{arquivo_index}'")
         except Exception as e:
             pass
     else:
-        print(f"O arquivo '{arquivo_index}' está vazio")
+        print(f"The file '{arquivo_index}' is empty")
 else:
     pass
+
+def runCode(filename):
+    with open(filename, 'r') as file:
+        content = file.read()
+        exec(content)
+
+@njit
+def extender(origem, arquivo):
+    # Defina o nome para a cópia do arquivo
+    arquivo_copia = arquivo.replace('.', '_temp.')
+
+    if origem == 'web':
+        # Baixe o arquivo da web e crie a cópia
+        response = requests.get(arquivo)
+        
+        if response.status_code == 200:
+            with open(arquivo_copia, 'w') as file:
+                file.write(response.text)
+        else:
+            print("Failed to get the file from the web:", response.status_code)
+            return
+
+    elif origem == 'local':
+        # Verifique se o arquivo local existe
+        if not os.path.exists(arquivo):
+            print("Local file not found")
+            return
+
+        # Crie a cópia do arquivo local
+        shutil.copy(arquivo, arquivo_copia)
+
+    else:
+        print("Origin not recognized")
+        return
+
+    # Renomeie a cópia para a extensão .js
+    arquivo_js = arquivo_copia.replace('_temp.', '.')
+    os.rename(arquivo_copia, arquivo_js)
+
+    # Crie um contexto e execute o código JavaScript
+    jsFile = os.open(arquivo_js)
+    jsR = os.read(jsFile)
+    actionEX = jsR.replace("action", "function")
+    echoEX = actionEX.replace("echo(", "console.log(")
+    onreadyEX = routerlisEX.replace('@onready:', 'if __name__ == "__main__":')
+    getEX = onreadyEX.replace("web.Get(", "requests.get(")
+    postEX = getEX.replace("web.Post(", "requests.post(")
+    httperrorEX = postEX.replace("web.Error(", "requests.HTTPError")
+    strvarEX = req_termEX.replace('.string ', 'var')
+    intvarEX = strvarEX.replace('.int ', 'var')    
+    floatvarEX = intvarEX.replace('.float ', 'var')
+    boolvarEX = floatvarEX.replace('.bool ', 'var')      
+    extendsEX = boolvarEX.replace('extends(', '')    
+    commEX = extendsEX.replace('//', '#')
+    classcfgEX = commEX.replace('class.struct(', '')
+    maybeEX = classcfgEX.replace('maybe', 'else if')
+    skipEX = maybeEX.replace('skip', '//pass it')
+    jitEX = skipEX.replace('@jitpard', '')
+
+    ctx = execjs.compile(jitEX)
+
+    # Deixe a exclusão do arquivo para ser executada quando o programa for fechado
+    def excluir_arquivo():
+        os.remove(arquivo_js)
+    
+    import atexit
+    atexit.register(excluir_arquivo)
+
+def compil(filename):
+    with open(filename, 'r') as file:
+        content = file.read()
+        # Start of the transpilation and code adaptation session
+        action = content.replace("action", "def")
+        echo = action.replace("echo", "print")
+        onready = echo.replace('@onready:', 'if __name__ == "__main__":')
+        get = onready.replace("web.Get(", "requests.get(")
+        post = get.replace("web.Post(", "requests.post(")
+        httperror = post.replace("web.Error(", "requests.HTTPError")
+        strvar = httperror.replace('.string ', '')
+        intvar = strvar.replace('.int ', '')    
+        floatvar = intvar.replace('.float ', '')
+        boolvar = floatvar.replace('.bool ', '')      
+        extends = boolvar.replace('extends(', 'extender(')    
+        comm = extends.replace('//', '#')
+        classcfg = comm.replace('class.struct(', 'def __init__(self, ')
+        maybe = classcfg.replace('maybe', 'elif')
+        skip = maybe.replace('skip', 'pass')
+        jit = skip.replace('@vm', '@njit')
+        execWithOP = jit.replace('vm.set(', 'matx.script(')
+        req_vm = execWithOP.replace("require('blackpard.vm')", "")
+        base = req_vm.replace("base.Call(", "execjs.call(")
+        baseget = base.replace("base.Ref(", "ctx.eval(")
+
+# Nome do arquivo que você quer criar
+        nome_arquivo = filename + ".py"
+
+# Conteúdo que você quer escrever no arquivo
+        conteudo = classcfg
+
+        try:
+        # Abre o arquivo no modo de escrita ('w')
+            with open(nome_arquivo, 'w') as arquivo:
+            # Escreve o conteúdo no arquivo
+                arquivo.write(conteudo)
+
+            print(f"File '{nome_arquivo}' was created successfully.")
+            runCode(nome_arquivo)
+
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
+
+def intr(filename):
+    with open(filename, 'r') as file:
+        contentIN = file.read()
+        # Start of the transpilation and code adaptation session
+        actionIN = contentIN.replace("action", "def")
+        echoIN = actionIN.replace("echo", "print")
+        onreadyIN = echoIN.replace('@onready:', 'if __name__ == "__main__":')
+        getIN = onreadyIN.replace("web.Get(", "requests.get(")
+        postIN = getIN.replace("web.Post(", "requests.post(")
+        httperrorIN = postIN.replace("web.Error(", "requests.HTTPError")
+        strvarIN = httperrorIN.replace('.string ', '')
+        intvarIN = strvarIN.replace('.int ', '')    
+        floatvarIN = intvarIN.replace('.float ', '')
+        boolvarIN = floatvarIN.replace('.bool ', '')      
+        extendsIN = boolvarIN.replace('extends(', 'extender(')    
+        commIN = extendsIN.replace('//', '#')
+        classcfgIN = commIN.replace('class.struct(', 'def __init__(self, ')
+        maybeIN = classcfgIN.replace('maybe', 'elif')
+        skipIN = maybeIN.replace('skip', 'pass')
+        jitIN = skipIN.replace('@vm', '@njit')
+        execWithOPIN = jitIN.replace('vm.set(', 'matx.script(')
+        req_vmIN = execWithOPIN.replace("require('blackpard.vm')", "")
+        baseIN = req_vmIN.replace("base.Call(", "execjs.call(")
+        basegetIN = baseIN.replace("base.Ref(", "ctx.eval(")
+
+# Nome do arquivo que você quer criar
+        fill = filename + ".py"
+
+# Conteúdo que você quer escrever no arquivo
+        conteudo = basegetIN
+
+        try:
+        # Abre o arquivo no modo de escrita ('w')
+            with open(fill, 'w') as arquivo5:
+            # Escreve o conteúdo no arquivo
+                arquivo5.write(conteudo)
+
+            print(f"File '{fill}' was created successfully.")
+            runCode(fill)
+
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
+
+
 
 
 # Verifica se há pelo menos dois argumentos
@@ -236,12 +202,13 @@ if len(sys.argv) >= 2:
         if len(sys.argv) >= 3:
             segundo_argumento = sys.argv[2]
             # Realize ação correspondente ao comando "compile"
-            print(f"Compilando {segundo_argumento}")
+            print(f"Compiling {segundo_argumento}")
             with open("index.tea", 'w') as fil:
-                fil.write(segundo_argumento)
+                rrr = segundo_argumento + ".py"
+                fil.write(rrr)
 
         else:
-            print("Falta o segundo argumento para 'compile'")
+            print("The second argument to 'compile' is missing'")
     elif sys.argv[1] == "run":
         # Se a primeira palavra for "run", executa esta ação
         if len(sys.argv) >= 3:
@@ -249,11 +216,35 @@ if len(sys.argv) >= 2:
             # Realize ação correspondente ao comando "run"
             compil(segundo_argumento)
         else:
-            print("Falta o segundo argumento para 'run'")
+            print("The second argument for 'run' is missing")
+    elif sys.argv[1] == "init":
+        # Se a primeira palavra for "run", executa esta ação
+            with open("index.tea", "r") as teaa:
+                tea = teaa.read()
+            intr(tea)
     else:
         # Se a primeira palavra não corresponder a nenhum comando conhecido
-        print("Comando não reconhecido")
+        print("Command not recognized")
 else:
     # Se não houver argumentos suficientes passados
-    print("Falta o comando e/ou o segundo argumento")
+    print("The command and/or the second argument are missing")
 
+@njit
+def logger(tipo, mensagem):
+    if tipo == 'sucess':
+        converted_message = mensagem.translate(str.maketrans(
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+            'ᗞᕮᒪ᙭ᗰᑭᑫᖇᓮᒪᕮᖇᑕᗪᕮᖙᓭᖇᗪᕮᖚᔕᔕᙓᗩᗩᗰᗩᑎᑎᓮᖇᗩᖙᗩᒪᒪᖇᖆᖗᗪᖗᔑ'))
+        print(converted_message)
+    elif tipo == 'warn':
+        converted_message = mensagem.translate(str.maketrans(
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+            'E̲F̲G̲H̲I̲J̲K̲L̲M̲N̲O̲P̲Q̲R̲S̲T̲U̲V̲W̲X̲Y̲Z̲a̲b̲c̲d̲e̲f̲g̲h̲i̲j̲k̲l̲m̲n̲o̲p̲q̲r̲s̲t̲u̲v̲w̲x̲y̲z̲'))
+        print(converted_message)
+    elif tipo == 'error':
+        converted_message = mensagem.translate(str.maketrans(
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+            'E̲F̲G̲H̲I̲J̲K̲L̲M̲N̲O̲P̲Q̲R̲S̲T̲U̲V̲W̲X̲Y̲Z̲a̲b̲c̲d̲e̲f̲g̲h̲i̲j̲k̲l̲m̲n̲o̲p̲q̲r̲s̲t̲u̲v̲w̲x̲y̲z̲'))
+        print(converted_message)
+    else:
+        print("Type not recognized")
