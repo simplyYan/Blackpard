@@ -1,6 +1,6 @@
 import os
 from numba import njit
-import execjs
+from py_mini_racer import MiniRacer
 import requests
 import shutil
 import sys
@@ -14,6 +14,10 @@ import sklearn as maplot
 import serial
 import subprocess
 import webbrowser
+
+# pyinstaller --onefile blpd.py 
+
+os.environ["EXECJS_RUNTIME"] = "Node"
 
 # Verifica se o arquivo "index.tea" existe
 arquivo_index = "index.tea"
@@ -79,7 +83,7 @@ def extender(origem, arquivo):
     jsR = os.read(jsFile)
     actionEX = jsR.replace("action", "function")
     echoEX = actionEX.replace("echo(", "console.log(")
-    onreadyEX = routerlisEX.replace('@onready:', 'if __name__ == "__main__":')
+    onreadyEX = echoEX.replace('@onready:', 'if __name__ == "__main__":')
     getEX = onreadyEX.replace("web.Get(", "requests.get(")
     postEX = getEX.replace("web.Post(", "requests.post(")
     httperrorEX = postEX.replace("web.Error(", "requests.HTTPError")
@@ -94,7 +98,8 @@ def extender(origem, arquivo):
     skipEX = maybeEX.replace('skip', '//pass it')
     jitEX = skipEX.replace('@jitpard', '')
 
-    ctx = execjs.compile(jitEX)
+    ctx = MiniRacer()
+    ctx.eval(jitEX)
 
     # Deixe a exclusão do arquivo para ser executada quando o programa for fechado
     def excluir_arquivo():
@@ -125,7 +130,7 @@ def compil(filename):
         jit = skip.replace('@vm', '@njit')
         execWithOP = jit.replace('vm.set(', 'matx.script(')
         req_vm = execWithOP.replace("require('blackpard.vm')", "")
-        base = req_vm.replace("base.Call(", "execjs.call(")
+        base = req_vm.replace("base.Call(", "ctx.call(")
         baseget = base.replace("base.Ref(", "ctx.eval(")
 
 # Nome do arquivo que você quer criar
