@@ -9,8 +9,6 @@ import scrapy as web
 import tkinter as ui
 import sqlalchemy as db
 from bs4 import BeautifulSoup as web
-import sklearn as maplot
-import serial
 import subprocess
 import webbrowser
 import argparse
