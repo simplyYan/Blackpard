@@ -1,11 +1,31 @@
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
 ## How to install
-Blackpard can be installed using third-party mirrors such as Google Drive and Mediafire. 
-See:
-- Google Drive: https://drive.google.com/drive/folders/1pfL5IzATpMqjFzNW7gZzVyAVBzXo5WT8?usp=sharing
+Blackpard can be installed using weepsbox, a tool I developed to install and run small, single-file Python packages. First, look at the requirements:
 
-- Mediafire: ???
+- Python >= 3.8.12
+
+- Windows, Linux or macOS versions released after 2017
+
+Now, if you have the requirements, just use a command in the terminal to install. The command is different for Windows, Linux and macOS. Check it out:
+
+- Windows (Powershell only):
+```
+powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/simplyYan/weepsbox/main/win.weepsbox.bat', 'win.weepsbox.bat')"
+win.weepsbox.bat
+```
+- Linux:
+```
+wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/lin.weepsbox.sh
+chmod 777 lin.weepsbox.sh
+./lin.weepsbox.sh
+```
+- macOS:
+```
+wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/mac.weepsbox.sh
+chmod 777 lin.weepsbox.sh
+./mac.weepsbox.sh
+```
 
 ## IDE
 Blackpard has its own IDE, called "Whitepard", which can be used online in the browser! To access the IDE, [click here](https://simplyyan.github.io/Whitepard/root/) or go to:
