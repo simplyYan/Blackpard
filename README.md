@@ -32,9 +32,9 @@ chmod 777 mac.weepsbox.sh
 ## Using the compiler
 Once installed, you can always run the compiler with weepsbox, using the command:
 ```
-./**OS**.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
+./><OS><.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
-Replace "**OS**" with the first 3 letters of the name of your operating system (win, lin, mac).
+Replace "><OS><" with the first 3 letters of the name of your operating system (win, lin, mac).
 After running the compiler with weepsbox, you must type one of 2 commands. "compile" to compile your script and make the compiler launch it automatically, and "run" to test a script.
 It is recommended that you create a separate directory and make a copy of weepsbox in it before compiling, and use this copy to compile. After compiling, you can distribute your program.
 To distribute, the only files you need to distribute are "index.tea" (generated during compilation) and your program's Blackpard files, with which the end user must download and run Blackpard using weepsbox (just as you did to get it) and run the "init" command in the compiler (being in the same directory as index.tea).
