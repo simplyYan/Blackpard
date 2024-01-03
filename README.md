@@ -9,6 +9,20 @@ Blackpard can be installed using weepsbox, a tool I developed to install and run
 
 - wget and curl (Linux/macOS)
 
+- Before installing, you must make sure that you are in the root in the terminal (in the directory where the terminal starts by default), and you must download the Python dependencies from Blackpard. To download the dependencies, use pip:
+```
+pip install numba
+pip install py_mini_racer
+pip install requests
+pip install scrapy
+pip install sqlalchemy
+pip install beautifulsoup4
+pip install scipy
+pip install scikit-learn
+
+```
+(For Linux, it's not "pip", but "pip3".)
+
 Now, if you have the requirements, just use a command in the terminal to install. The command is different for Windows, Linux and macOS. Check it out:
 
 - Windows (Powershell only):
