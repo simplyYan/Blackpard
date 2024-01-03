@@ -14,6 +14,9 @@ import sklearn as maplot
 import serial
 import subprocess
 import webbrowser
+import argparse
+
+
 
 # pyinstaller --onefile blpd.py 
 
@@ -253,3 +256,32 @@ def logger(tipo, mensagem):
         print(converted_message)
     else:
         print("Type not recognized")
+
+def main():
+    while True:
+        command = input("Enter command (compile, run, init) or 'exit' to quit: ")
+        if command == 'exit':
+            break
+
+        if command not in ['compile', 'run', 'init']:
+            print("Invalid command. Please enter a valid command.")
+            continue
+
+        if command == "compile":
+            filename = input("Enter file name to compile: ")
+            print(f"Compiling {filename}")
+            with open("index.tea", 'w') as fil2:
+                rrr2 = filename + ".py"
+                fil2.write(rrr2)
+
+        elif command == "run":
+            filename = input("Enter file name to run: ")
+            compil(filename)
+
+        elif command == "init":
+            with open("index.tea", "r") as teaa:
+                tea = teaa.read()
+            intr(tea)
+
+if __name__ == "__main__":
+    main()
