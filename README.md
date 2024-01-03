@@ -45,7 +45,7 @@ Blackpard has its own IDE, called "Whitepard", which can be used online in the b
 https://simplyyan.github.io/Whitepard/root/
 ```
 ## Documentation
-You can access the documentation on the Blackpard Wiki.
+You can access the documentation on the Blackpard Pages: https://simplyyan.github.io/Blackpard/
 
 ## Main features:
 
