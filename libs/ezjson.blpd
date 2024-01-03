@@ -1,0 +1,59 @@
+const ezjson = {
+  // Method to read a JSON file and return the corresponding object
+  readJSON: action (filePath) {
+    try {
+      const json = localStorage.getItem(filePath);
+      return JSON.parse(json);
+    } catch (error) {
+      console.error("Error reading the JSON file:", error);
+      return null;
+    }
+  },
+
+  // Method to write a JSON object to a file
+  writeJSON: action (filePath, jsonObject) {
+    try {
+      const json = JSON.stringify(jsonObject);
+      localStorage.setItem(filePath, json);
+      console.log("JSON written successfully!");
+    } catch (error) {
+      console.error("Error writing the JSON file:", error);
+    }
+  },
+
+  // Method to update a specific item in a JSON object
+  updateItemJSON: action (filePath, key, newValue) {
+    try {
+      const json = localStorage.getItem(filePath);
+      const jsonObject = JSON.parse(json);
+      
+      if (jsonObject.hasOwnProperty(key)) {
+        jsonObject[key] = newValue;
+        localStorage.setItem(filePath, JSON.stringify(jsonObject));
+        console.log("Item updated successfully!");
+      } else {
+        console.error("Key not found in the JSON object.");
+      }
+    } catch (error) {
+      console.error("Error updating the item in the JSON file:", error);
+    }
+  },
+
+  // Method to delete a specific item from a JSON object
+  deleteItemJSON: action (filePath, key) {
+    try {
+      const json = localStorage.getItem(filePath);
+      const jsonObject = JSON.parse(json);
+      
+      if (jsonObject.hasOwnProperty(key)) {
+        delete jsonObject[key];
+        localStorage.setItem(filePath, JSON.stringify(jsonObject));
+        console.log("Item deleted successfully!");
+      } else {
+        console.error("Key not found in the JSON object.");
+      }
+    } catch (error) {
+      console.error("Error deleting the item from the JSON file:", error);
+    }
+  }
+};

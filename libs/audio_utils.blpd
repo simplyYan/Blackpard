@@ -1,0 +1,38 @@
+const AudioUtils = {
+  // Método para reproduzir um arquivo de áudio
+  playAudio: action (filePath) {
+    try {
+      const audio = new Audio(filePath);
+      audio.play();
+      console.log("Audio playback initiated!");
+    } catch (error) {
+      console.error("Error playing the audio file:", error);
+    }
+  },
+
+  // Método para parar a reprodução de áudio
+  stopAudio: action () {
+    try {
+      const audioElements = document.querySelectorAll('audio');
+      audioElements.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      console.log("Audio playback stopped!");
+    } catch (error) {
+      console.error("Error stopping audio playback:", error);
+    }
+  },
+
+  // Método para converter texto em fala (TTS)
+  textToSpeech: action (text) {
+    try {
+      const speechSynthesis = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+      console.log("Text converted to speech!");
+    } catch (error) {
+      console.error("Error converting text to speech:", error);
+    }
+  }
+};
