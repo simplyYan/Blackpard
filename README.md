@@ -25,7 +25,7 @@ chmod 777 lin.weepsbox.sh
 - macOS:
 ```
 wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/mac.weepsbox.sh
-chmod 777 lin.weepsbox.sh
+chmod 777 mac.weepsbox.sh
 ./mac.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
 
