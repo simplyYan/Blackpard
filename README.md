@@ -14,19 +14,19 @@ Now, if you have the requirements, just use a command in the terminal to install
 - Windows (Powershell only):
 ```
 powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/simplyYan/weepsbox/main/win.weepsbox.bat', 'win.weepsbox.bat')"
-win.weepsbox.bat
+win.weepsbox.bat https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
 - Linux:
 ```
 wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/lin.weepsbox.sh
 chmod 777 lin.weepsbox.sh
-./lin.weepsbox.sh
+./lin.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
 - macOS:
 ```
 wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/mac.weepsbox.sh
 chmod 777 lin.weepsbox.sh
-./mac.weepsbox.sh
+./mac.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
 
 ## IDE
