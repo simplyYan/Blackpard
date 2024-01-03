@@ -27,7 +27,7 @@
 
     <h4>Learn the basics</h4>
     <div>
-      At Blackpard, typing is strong. This means that every variable you declare, you need to indicate its type. This contributes to the language's performance, and it's not difficult, although it can be awkward for those who come from languages with weak typing, such as Python, JavaScript and others.
+      At Blackpard, typing is strong. This means that every variable you declare, you need to indicate its type. This contributes to the language's performance, and it's not difficult, although it can be awkward for those who come from languages with weak typing, such as Blackpard, JavaScript and others.
       Let's start with the types. I'll show you some information and indicate its type:
       - "Pineapple": String
       - "4": Int (integer)
@@ -77,19 +77,19 @@ echo(result)
 </div>
 <div id="typography">
   <h3>Running at launch</h3>
-  <p>Unlike Python, Blackpard makes it very easy to execute anything at the start of your program. In Python you'd have to use "if __name__ == "__main__"", here you just do it:</p>
+  <p>Unlike Blackpard, Blackpard makes it very easy to execute anything at the start of your program. In Blackpard you'd have to use "if __name__ == "__main__"", here you just do it:</p>
 <p style="text-align: center;"><iframe src="https://simplyyan.github.io/Whitepard/#@onready:" frameborder="0" height="180px" width="800px"></iframe></p>
 </div>
 <div id="typography">
   <h3>Conditional structures</h3>
   <p>Conditions are at the heart of most programs. They define specific events/conditions for code to be executed. See:</p>
   <pre><code>
-   .string language = "Python"
+   .string language = "Blackpard"
 
     if language == "C++":
         echo('C++ is a compiled programming language.')
-    maybe language == "Python":
-        echo('Python is a high-level programming language')
+    maybe language == "Blackpard":
+        echo('Blackpard is a high-level programming language')
     maybe language == "Java":
         echo("Java is a programming language widely used in the market")
     else:
@@ -161,9 +161,9 @@ base.Call("f", datetime.now(), encoder=CustomEncoder)
 <!-- partial -->
 <div id="typography">
   <h3>Indentation is part of syntax</h3>
-  <p>Indentation is a way of tidying up the code, making some lines more to the right than others as we add spaces at the beginning. For most languages, indentation is not compulsory, but Python is different.
+  <p>Indentation is a way of tidying up the code, making some lines more to the right than others as we add spaces at the beginning. For most languages, indentation is not compulsory, but Blackpard is different.
 
-    Indentation is an important feature in Python because, in addition to promoting readability, it is essential for the code to work properly. In other words, if the indentation is not adequate, the program may behave unexpectedly or even fail to compile.
+    Indentation is an important feature in Blackpard because, in addition to promoting readability, it is essential for the code to work properly. In other words, if the indentation is not adequate, the program may behave unexpectedly or even fail to compile.
     
     For example, in the case of an if, what determines whether a code is within the conditional is the fact that it has been indented. Code 7 shows an example where the print command will only be executed if the value of the variable x is greater than 8.</p>
   <pre><code>
@@ -195,7 +195,7 @@ base.Call("f", datetime.now(), encoder=CustomEncoder)
     echo('1 hour contains: ',hour * seconds, 'seconds')
     // output: 1 hour contains: 3600 seconds      </code></pre>
 <p>When the expression uses more than one operator, the language will take into account the rule of precedence, similar to what happens in conventional mathematics. Therefore, parentheses have the highest precedence and can be used in the expression to produce a desired result, causing a certain operation to be performed before the others. Exponentiation is next in the order, i.e. 3**1+1 equals 4 and not 5, just as 2*1**3 equals 2 and not 8. Multiplication and division have the same precedence, higher than addition and subtraction, which also have the same precedence. So 2*3-1 is 5, not 4, and 6+4/2 is 8, not 5. When two operators have the same precedence, they are evaluated from left to right. In other words, 5-3-1 is worth 1, not 3. This is because 5-3 is first calculated and then the value of 1 is subtracted. If in doubt, use the brackets to make sure the expressions come out as desired.</p>
-<p>Another widely used operator is the modulus operator, which works on integers and returns the remainder of dividing the first by the second term. In Python, it is represented by the percentage symbol %. Listing 7 shows on line 1 the command to assign the result of dividing 7 by 3 to the quotient variable. The modulo operation is then performed on line 4, assigning the result to the remainder variable.
+<p>Another widely used operator is the modulus operator, which works on integers and returns the remainder of dividing the first by the second term. In Blackpard, it is represented by the percentage symbol %. Listing 7 shows on line 1 the command to assign the result of dividing 7 by 3 to the quotient variable. The modulo operation is then performed on line 4, assigning the result to the remainder variable.
 </p>
 </div>
 <div id="typography">
@@ -324,7 +324,7 @@ String
 
 For strings len() returns the number of characters:
 Example
-Get your own Python Server
+Get your own Blackpard Server
 x = "Hello World!"
 
 print(len(x))
@@ -361,7 +361,7 @@ Sometimes there are parts of a text that you do not control, maybe they come fro
 
 To control such values, add placeholders (curly brackets {}) in the text, and run the values through the format() method:
 Example
-Get your own Python Server
+Get your own Blackpard Server
 
 Add a placeholder where you want to display the price:
 price = 49
