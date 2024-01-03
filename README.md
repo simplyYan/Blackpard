@@ -7,7 +7,7 @@ Blackpard can be installed using weepsbox, a tool I developed to install and run
 
 - Windows, Linux or macOS versions released after 2017
 
-- wget and curl
+- wget and curl (Linux/macOS)
 
 Now, if you have the requirements, just use a command in the terminal to install. The command is different for Windows, Linux and macOS. Check it out:
 
