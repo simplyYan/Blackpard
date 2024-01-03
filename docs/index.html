@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Blackpard Docs</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+  <section class="header">
+     <div>
+      Welcome to the documentation for Blackpard, a high-level programming language with strong typing.</a>.
+
+    </div>
+
+    <br/>
+
+    <div>
+      This documentation contains examples of editables that use <a href="https://simplyyan.github.io/Whitepard/" target="_blank">Whitepard</a>, Blackpard's IDE. 
+    </div>
+
+
+
+    <h4>Learn the basics</h4>
+    <div>
+      At Blackpard, typing is strong. This means that every variable you declare, you need to indicate its type. This contributes to the language's performance, and it's not difficult, although it can be awkward for those who come from languages with weak typing, such as Python, JavaScript and others.
+      Let's start with the types. I'll show you some information and indicate its type:
+      - "Pineapple": String
+      - "4": Int (integer)
+      - "9.45" Float
+      - "False" Boolean.
+      Here's an example that defines a string:
+<br>
+<p style="text-align: center;"><iframe src="https://simplyyan.github.io/Whitepard/#.string juice = 'orange'" frameborder="0" height="180px" width="800px"></iframe></p>
+      <br/><br/> Variables are, in short, information that you want to store for later use. But it's important to remember that variables have a life cycle, and only last for one session. To store information for an infinite amount of time, you can use files or databases.
+    </div>
+
+
+    <h3>Actions (Functions)</h3>
+  </section>
+
+  <!-- Grid -->
+  <div id="grid">
+    <h3>Simple function</h3>
+    <p>Functions are blocks of code that you can call at any time, not necessarily when the program is executed. In them you can do anything, and even return information. Here's an example of a function in Blackpard:</p>
+  <pre><code>
+action hello():
+  echo("Hello World")
+
+  </code></pre>
+
+  <!-- Typography -->
+  <div id="typography">
+    <h3>Returning information in functions</h3>
+    <p>As already mentioned, you can return information in functions. Here's an example: </p>
+    <pre><code>
+action hello(num1, num2):
+  return num1 + num2
+
+.int result = hello(1, 1)
+echo(result)
+      
+        </code></pre>
+
+</div>
+</div>
+
+  <!-- Typography -->
+  <div id="typography">
+    <h3>Displaying in the terminal</h3>
+    <p>In Blackpard, the "echo" function is used to send information to the terminal. Here's an example: </p>
+    <p style="text-align: center;"><iframe src="https://simplyyan.github.io/Whitepard/#echo('Hello World!')" frameborder="0" height="180px" width="800px"></iframe></p>
+</div>
+<div id="typography">
+  <h3>Running at launch</h3>
+  <p>Unlike Python, Blackpard makes it very easy to execute anything at the start of your program. In Python you'd have to use "if __name__ == "__main__"", here you just do it:</p>
+<p style="text-align: center;"><iframe src="https://simplyyan.github.io/Whitepard/#@onready:" frameborder="0" height="180px" width="800px"></iframe></p>
+</div>
+<div id="typography">
+  <h3>Conditional structures</h3>
+  <p>Conditions are at the heart of most programs. They define specific events/conditions for code to be executed. See:</p>
+  <pre><code>
+   .string language = "Python"
+
+    if language == "C++":
+        echo('C++ is a compiled programming language.')
+    maybe language == "Python":
+        echo('Python is a high-level programming language')
+    maybe language == "Java":
+        echo("Java is a programming language widely used in the market")
+    else:
+        echo('It is neither of the two options')
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>Skipping functions</h3>
+  <p>In our language, you can skip a function. This is useful if that functionality/logic is still to be developed. Here's an example:</p>
+  <pre><code>
+action test():
+  skip 
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>Making your program much faster</h3>
+  <p>Blackpard offers built-in techniques that make your program much faster. Some of these are JIT compilation and extreme typing. See a complete example:</p>
+  <pre><code>
+    @vm
+    action fib(n: int) -> int:
+    if n <= 1:
+        return n
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+
+@onready:
+    fib_script = vm.set(fib)
+    
+    echo(f'Blackpard execution time: {timeit.timeit(lambda: fib_script(30), number=10)}s') # 0.03s
+
+
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>Working with libraries</h3>
+  <p>As with most languages, you can use external libraries in Blackpard! Well, you can choose to use libraries directly from CDN/Web or download them. If you use libraries downloaded locally, use the "local" argument, if you use them from the web, use the "web" argument. Here's an example:</p>
+  <pre><code>
+//Using a web lib
+extends('web', 'yourlib.com/lib.blpd')
+//Using a local lib
+extends('local', 'test.blpd')
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>Calling functions and library values</h3>
+  <p>You can execute functions and get values easily from imported libraries. To do this, simply use the included "base" module. The "base" is already included and activated, just use it. Here's an example:</p>
+  <pre><code>
+//Run a function
+base.Call("hello") //In this example, "hello" would be called
+//Get a value
+base.Ref("yourVar")
+//Advanced example:
+
+// Example lib: var f = function(args) { return args; }
+base.Call("f", datetime.now(), encoder=CustomEncoder)
+// '2017-03-31T16:51:02.474118'
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>Keywords</h3>
+  <p>Blackpard, like any language, has a set of keywords, which are terms that have special meaning for the compiler and cannot be used as names. Below is a list of these terms:</p>
+  <pre><code>
+    and, as, assert, break, class, continue, action, del, maybe, else, except, False, finally,
+    for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, skip, raise,
+    return, True, try, while, with, yield, .string, .int, .bool, .float
+      </code></pre>
+</div>
+<!-- partial -->
+<div id="typography">
+  <h3>Indentation is part of syntax</h3>
+  <p>Indentation is a way of tidying up the code, making some lines more to the right than others as we add spaces at the beginning. For most languages, indentation is not compulsory, but Python is different.
+
+    Indentation is an important feature in Python because, in addition to promoting readability, it is essential for the code to work properly. In other words, if the indentation is not adequate, the program may behave unexpectedly or even fail to compile.
+    
+    For example, in the case of an if, what determines whether a code is within the conditional is the fact that it has been indented. Code 7 shows an example where the print command will only be executed if the value of the variable x is greater than 8.</p>
+  <pre><code>
+    x = 10
+
+    if x > 8:
+       print("x is greater than 8")
+    
+    Code 7. Print command inside an if
+    
+    Now look at this new example in which the print command will be executed anyway because it is not indented and therefore not contained in the if.
+    
+    x = 10
+    
+    if x > 8:
+    
+    print("x is greater than 8")
+    
+    Code 8: Print command outside an if
+    
+    There are two errors in Code 8. The first has to do with the way the code was written, because if the print command is only supposed to be executed if x is greater than 8, it should be indented.      </code></pre>
+</div>
+<div id="typography">
+  <h3>Operators</h3>
+  <p>Operators are symbols that represent mathematical operations. The main ones are: +, -, *, / and **, which represent addition, subtraction, multiplication, division and exponentiation respectively. The following code shows an example of multiplication between hours and seconds:</p>
+  <pre><code>
+    .int hour=60
+    .int seconds=60
+    echo('1 hour contains: ',hour * seconds, 'seconds')
+    // output: 1 hour contains: 3600 seconds      </code></pre>
+<p>When the expression uses more than one operator, the language will take into account the rule of precedence, similar to what happens in conventional mathematics. Therefore, parentheses have the highest precedence and can be used in the expression to produce a desired result, causing a certain operation to be performed before the others. Exponentiation is next in the order, i.e. 3**1+1 equals 4 and not 5, just as 2*1**3 equals 2 and not 8. Multiplication and division have the same precedence, higher than addition and subtraction, which also have the same precedence. So 2*3-1 is 5, not 4, and 6+4/2 is 8, not 5. When two operators have the same precedence, they are evaluated from left to right. In other words, 5-3-1 is worth 1, not 3. This is because 5-3 is first calculated and then the value of 1 is subtracted. If in doubt, use the brackets to make sure the expressions come out as desired.</p>
+<p>Another widely used operator is the modulus operator, which works on integers and returns the remainder of dividing the first by the second term. In Python, it is represented by the percentage symbol %. Listing 7 shows on line 1 the command to assign the result of dividing 7 by 3 to the quotient variable. The modulo operation is then performed on line 4, assigning the result to the remainder variable.
+</p>
+</div>
+<div id="typography">
+  <h3>Class</h3>
+  <p>In Blackpard, creating classes is very simple and allows us to define which attributes and methods a class will have. </p>
+  <pre><code>
+    class Pessoa:
+    class.struct(name, age):
+        self.name = name
+        self.age = age
+
+        action setname(self, name):
+        self.name = name
+
+        action setIdade(self, age):
+        self.age = age
+
+        action getname(self):
+        return self.name
+
+        action getIdade(self):
+        return self.age      
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>While</h3>
+  <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
+  <pre><code>
+    i = 1
+    while i < 6:
+      print(i)
+      i += 1    
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>The break Statement</h3>
+  <p>With the break statement we can stop the loop even if the while condition is true:</p>
+  <pre><code>
+    i = 1
+    while i < 6:
+      print(i)
+      if i == 3:
+        break
+      i += 1    
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>The continue Statement</h3>
+  <p>With the continue statement we can stop the current iteration, and continue with the next:</p>
+  <pre><code>
+    i = 0
+    while i < 6:
+      i += 1
+      if i == 3:
+        continue
+      print(i)
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>For loop</h3>
+  <p>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+    This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
+    
+    With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
+  <pre><code>
+    fruits = ["apple", "banana", "cherry"]
+    for x in fruits:
+      print(x)
+      </code></pre>
+</div>
+<div id="typography">
+  <h3>Arrays</h3>
+  <p>Arrays are used to store multiple values in one single variable:</p>
+  <pre><code>
+    cars = ["Ford", "Volvo", "BMW"] 
+      </code></pre>
+      Access the Elements of an Array
+
+      You refer to an array element by referring to the index number.
+      Example
+      
+      Get the value of the first array item:
+      <pre><code>
+      x = cars[0]
+    </code></pre>
+      Example
+      
+      Modify the value of the first array item:
+      <pre><code>
+      cars[0] = "Toyota"
+    </code></pre>
+      The Length of an Array
+      
+      Use the len() method to return the length of an array (the number of elements in an array).
+      
+      Return the number of elements in the cars array:
+      <pre><code>
+      x = len(cars) 
+    </code></pre>
+    Adding Array Elements
+
+    You can use the append() method to add an element to an array.
+    Example
+    
+    Add one more element to the cars array:
+    cars.append("Honda")
+    Removing Array Elements
+    
+    You can use the pop() method to remove an element from the array.
+    Example
+    
+    Delete the second element of the cars array:
+    cars.pop(1)
+    
+    You can also use the remove() method to remove an element from the array.
+    Example
+    
+    Delete the element that has the value "Volvo":
+    cars.remove("Volvo")       
+      
+</div>
+<h3>Polymorphism</h3>
+
+String
+
+For strings len() returns the number of characters:
+Example
+Get your own Python Server
+x = "Hello World!"
+
+print(len(x))
+Tuple
+
+For tuples len() returns the number of items in the tuple:
+Example
+mytuple = ("apple", "banana", "cherry")
+
+print(len(mytuple))
+Dictionary
+
+For dictionaries len() returns the number of key/value pairs in the dictionary:
+Example
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+print(len(thisdict)) 
+
+</div>
+<h3>User input</h3>
+username = input("Enter username:")
+print("Username is: " + username)
+
+<h3>String formatting</h3>
+String format()
+
+The format() method allows you to format selected parts of a string.
+
+Sometimes there are parts of a text that you do not control, maybe they come from a database, or user input?
+
+To control such values, add placeholders (curly brackets {}) in the text, and run the values through the format() method:
+Example
+Get your own Python Server
+
+Add a placeholder where you want to display the price:
+price = 49
+txt = "The price is {} dollars"
+print(txt.format(price))
+
+You can add parameters inside the curly brackets to specify how to convert the value:
+Example
+
+Format the price to be displayed as a number with two decimals:
+txt = "The price is {:.2f} dollars"
+
+Check out all formatting types in our String format() Reference.
+Multiple Values
+
+If you want to use more values, just add more values to the format() method:
+print(txt.format(price, itemno, count))
+
+And add more placeholders:
+Example
+quantity = 3
+itemno = 567
+price = 49
+myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
+Index Numbers
+
+You can use index numbers (a number inside the curly brackets {0}) to be sure the values are placed in the correct placeholders:
+Example
+quantity = 3
+itemno = 567
+price = 49
+myorder = "I want {0} pieces of item number {1} for {2:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
+
+Also, if you want to refer to the same value more than once, use the index number:
+Example
+age = 36
+name = "John"
+txt = "His name is {1}. {1} is {0} years old."
+print(txt.format(age, name))
+Named Indexes
+
+You can also use named indexes by entering a name inside the curly brackets {carname}, but then you must use names when you pass the parameter values txt.format(carname = "Ford"):
+Example
+myorder = "I have a {carname}, it is a {model}."
+print(myorder.format(carname = "Ford", model = "Mustang")) 
+</body>
+</html>
