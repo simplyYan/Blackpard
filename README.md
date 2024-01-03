@@ -23,6 +23,12 @@ pip install scikit-learn
 ```
 (For Linux, it's not "pip", but "pip3".)
 
+- Linux needs LLVM:
+```
+sudo apt-get update
+sudo apt-get install llvm
+```
+
 Now, if you have the requirements, just use a command in the terminal to install. The command is different for Windows, Linux and macOS. Check it out:
 
 - Windows (Powershell only):
