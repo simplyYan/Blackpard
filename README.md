@@ -11,7 +11,7 @@ Blackpard can be installed using weepsbox, a tool I developed to install and run
 
 - Python >= 3.8.12
 
-- Windows, Linux or macOS versions released after 2017
+- Windows, Linux or macOS versions released after 2016
 
 - wget and curl (Linux/macOS)
 
