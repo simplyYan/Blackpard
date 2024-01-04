@@ -1,3 +1,10 @@
+```
+ __             __        __        __   __  
+|__) |     /\  /  ` |__/ |__)  /\  |__) |  \ 
+|__) |___ /~~\ \__, |  \ |    /~~\ |  \ |__/ 
+
+```
+
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
 ## How to install
