@@ -180,7 +180,7 @@ base.Call("f", datetime.now(), encoder=CustomEncoder)
     
     if x > 8:
     
-    print("x is greater than 8")
+    echo("x is greater than 8")
     
     Code 8: Print command outside an if
     
@@ -236,7 +236,7 @@ base.Call("f", datetime.now(), encoder=CustomEncoder)
   <pre><code>
     i = 1
     while i < 6:
-      print(i)
+      echo(i)
       if i == 3:
         break
       i += 1    
@@ -264,7 +264,7 @@ base.Call("f", datetime.now(), encoder=CustomEncoder)
   <pre><code>
     fruits = ["apple", "banana", "cherry"]
     for x in fruits:
-      print(x)
+      echo(x)
       </code></pre>
 </div>
 <div id="typography">
@@ -327,14 +327,14 @@ Example
 Get your own Blackpard Server
 x = "Hello World!"
 
-print(len(x))
+echo(len(x))
 Tuple
 
 For tuples len() returns the number of items in the tuple:
 Example
 mytuple = ("apple", "banana", "cherry")
 
-print(len(mytuple))
+echo(len(mytuple))
 Dictionary
 
 For dictionaries len() returns the number of key/value pairs in the dictionary:
@@ -350,7 +350,7 @@ print(len(thisdict))
 </div>
 <h3>User input</h3>
 username = input("Enter username:")
-print("Username is: " + username)
+echo("Username is: " + username)
 
 <h3>String formatting</h3>
 String format()
@@ -366,7 +366,7 @@ Get your own Blackpard Server
 Add a placeholder where you want to display the price:
 price = 49
 txt = "The price is {} dollars"
-print(txt.format(price))
+echo(txt.format(price))
 
 You can add parameters inside the curly brackets to specify how to convert the value:
 Example
@@ -378,7 +378,7 @@ Check out all formatting types in our String format() Reference.
 Multiple Values
 
 If you want to use more values, just add more values to the format() method:
-print(txt.format(price, itemno, count))
+echo(txt.format(price, itemno, count))
 
 And add more placeholders:
 Example
@@ -386,7 +386,7 @@ quantity = 3
 itemno = 567
 price = 49
 myorder = "I want {} pieces of item number {} for {:.2f} dollars."
-print(myorder.format(quantity, itemno, price))
+echo(myorder.format(quantity, itemno, price))
 Index Numbers
 
 You can use index numbers (a number inside the curly brackets {0}) to be sure the values are placed in the correct placeholders:
@@ -395,19 +395,19 @@ quantity = 3
 itemno = 567
 price = 49
 myorder = "I want {0} pieces of item number {1} for {2:.2f} dollars."
-print(myorder.format(quantity, itemno, price))
+echo(myorder.format(quantity, itemno, price))
 
 Also, if you want to refer to the same value more than once, use the index number:
 Example
 age = 36
 name = "John"
 txt = "His name is {1}. {1} is {0} years old."
-print(txt.format(age, name))
+echo(txt.format(age, name))
 Named Indexes
 
 You can also use named indexes by entering a name inside the curly brackets {carname}, but then you must use names when you pass the parameter values txt.format(carname = "Ford"):
 Example
 myorder = "I have a {carname}, it is a {model}."
-print(myorder.format(carname = "Ford", model = "Mustang")) 
+echo(myorder.format(carname = "Ford", model = "Mustang")) 
 </body>
 </html>
