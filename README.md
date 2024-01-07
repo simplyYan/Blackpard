@@ -1,6 +1,4 @@
-
-
-[![Blackpard Lang](https://raw.githubusercontent.com/simplyYan/Blackpard/main/Logo.png](https://simplyyan.github.io/Blackpard/)
+![Blackpard Lang](https://raw.githubusercontent.com/simplyYan/Blackpard/main/Logo.png)
 
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
