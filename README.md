@@ -43,6 +43,9 @@ After running the compiler with weepsbox, you must type one of 2 commands. "comp
 It is recommended that you create a separate directory and make a copy of weepsbox in it before compiling, and use this copy to compile. After compiling, you can distribute your program.
 To distribute, the only files you need to distribute are "index.tea" (generated during compilation) and your program's Blackpard files, with which the end user must download and run Blackpard using weepsbox (just as you did to get it) and run the "init" command in the compiler (being in the same directory as index.tea).
 
+### Differentials for Linux
+For Linux, Blackpard is faster, and the end customer doesn't need to install anything third-party (dependencies).
+
 ## IDE
 Blackpard has its own IDE, called "Whitepard", which can be used online in the browser! To access the IDE, [click here](https://simplyyan.github.io/Whitepard/root/) or go to:
 ```
