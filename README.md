@@ -31,6 +31,7 @@ On Linux, Blackpard is pre-built and can be downloaded via Google Drive or Media
 - (The instructions are already included)
 
 ## Using the compiler
+### macOS
 Once installed, you can always run the compiler with weepsbox, using the command:
 ```
 ./><OS><.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
@@ -40,8 +41,16 @@ After running the compiler with weepsbox, you must type one of 2 commands. "comp
 It is recommended that you create a separate directory and make a copy of weepsbox in it before compiling, and use this copy to compile. After compiling, you can distribute your program.
 To distribute, the only files you need to distribute are "index.tea" (generated during compilation) and your program's Blackpard files, with which the end user must download and run Blackpard using weepsbox (just as you did to get it) and run the "init" command in the compiler (being in the same directory as index.tea).
 
-### Differentials for Linux
+### Windows and Linux
+Using the compiler on Linux and Windows is similar, but the end client won't need the dependencies. The commands are:
+
+- run: Run/Test a Blackpard file
+- compile: Convert to executable. This command renders the compiler useless and turns it into an executable of your Blackpard program. To distribute, you must include the compiler (which is now your executable), the generated "index.tea" and the necessary files from your program (Blackpard scripts and other files). Once compiled, you must download a new compiler to use (download Blackpard again). So, in short, the compiler you used to use "compile" is now an executable that you can distribute.
+- init: This command should be used by the end user to start your program.
+
+### Differentials for Linux and Windows
 For Linux, Blackpard is faster, and the end customer doesn't need to install anything third-party (dependencies).
+On Windows, Blackpard is a little lighter, but has a little less performance, and the end user won't need to have any dependencies.
 
 ## IDE
 Blackpard has its own IDE, called "Whitepard", which can be used online in the browser! To access the IDE, [click here](https://simplyyan.github.io/Whitepard/root/) or go to:
