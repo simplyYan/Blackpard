@@ -3,6 +3,7 @@
  |_____] |      |_____| |       |____/  |_____] |_____| |_____/ |     \
  |_____] |_____ |     | |_____  |    \_ |       |     | |    \_ |_____/    
 ```
+[](https://raw.githubusercontent.com/simplyYan/Blackpard/main/Logo.png)
 
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
