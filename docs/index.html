@@ -105,33 +105,13 @@ action test():
       </code></pre>
 </div>
 <div id="typography">
-  <h3>Making your program much faster</h3>
-  <p>Blackpard offers built-in techniques that make your program much faster. Some of these are JIT compilation and extreme typing. See a complete example:</p>
-  <pre><code>
-    @vm
-    action fib(n: int) -> int:
-    if n <= 1:
-        return n
-    else:
-        return fib(n - 1) + fib(n - 2)
-
-
-@onready:
-    fib_script = vm.set(fib)
-    
-    echo(f'Blackpard execution time: {timeit.timeit(lambda: fib_script(30), number=10)}s') # 0.03s
-
-
-      </code></pre>
-</div>
-<div id="typography">
   <h3>Working with libraries</h3>
   <p>As with most languages, you can use external libraries in Blackpard! You can use built-in libraries, which are native to the language or from the community. Native libraries can be downloaded from Pardpackage, and community libraries can be found on Github. Here's an example, using the CutePard built-in library, which was officially the first Blackpard library:</p>
   <pre><code>
 //Importing the library
-extends('libs/CutePard.c')
+cutepard = extends('libs/cutepard.so') //cutepard.dll on Windows
 //Now I can call any function in the library. CutePard is a test library and has only one function
-CallCute()
+cutepard.CallCute()
       </code></pre>
 </div>
 <div id="typography">
