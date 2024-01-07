@@ -3,33 +3,37 @@
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
 ## How to install
-Blackpard can be installed using weepsbox, a tool I developed to install and run small, single-file Python packages. First, look at the requirements:
+- **macOS**:
+Blackpard can be installed using weepsbox, a tool I developed to install and run small, single-file Python packages. First, look at the macOS requirements:
 
 - Python >= 3.8.12
 
 - Windows, Linux or macOS versions released after 2016
 
-- wget and curl (Linux/macOS)
+- wget and curl
 
-Now, if you have the requirements, just use a command in the terminal to install. The command is different for Windows, Linux and macOS. Check it out:
+Now, if you have the requirements, just use a command in the terminal to install. Check it out:
 
 - Windows (Powershell only):
-```
-powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/simplyYan/weepsbox/main/win.weepsbox.bat', 'win.weepsbox.bat')"
-win.weepsbox.bat https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
-```
-- Linux:
-```
-wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/lin.weepsbox.sh
-chmod 777 lin.weepsbox.sh
-./lin.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
-```
-- macOS:
 ```
 wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/mac.weepsbox.sh
 chmod 777 mac.weepsbox.sh
 ./mac.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
+- **Windows**:
+Blackpard can be installed using weepsbox, a tool I developed to install and run small, single-file Python packages. First, look at the Windows requirements:
+
+- Python >= 3.8.12
+Now, if you have the requirements, just use a command in the terminal to install. Check it out (POWERSHELL ONLY):
+```
+powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/simplyYan/weepsbox/main/win.weepsbox.bat', 'win.weepsbox.bat')"
+win.weepsbox.bat https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
+```
+- **Linux**:
+On Linux, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
+- Google Drive: https://drive.google.com/drive/folders/1DsU1dZFnXwxQZMNPcUIm2XQPGtoApO3D?usp=sharing
+- Mediafire: ???
+
 
 ## Using the compiler
 Once installed, you can always run the compiler with weepsbox, using the command:
