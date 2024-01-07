@@ -1,0 +1,9 @@
+Step by step to install Blackpard:
+
+1. Download the .ZIP called "blackpard.zip"
+
+2. Extract the ZIP
+
+3. Done!
+
+Now you can use the compiler from the terminal. To work properly, it is recommended that you copy the files extracted from the downloaded .ZIP to the root directory of your Linux system, for example: C:\Users\USER. You can then run the compiler from the terminal, using: "blackpard" (if you copy the extracted files to the root, otherwise they must be in the same directory as the compiler).
