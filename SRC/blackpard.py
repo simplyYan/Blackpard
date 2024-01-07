@@ -1,23 +1,14 @@
 import os
-from numba import njit
-from py_mini_racer import MiniRacer
-import requests
 import shutil
 import sys
-import matx
-import scrapy as web
-import tkinter as ui
-import sqlalchemy as db
-from bs4 import BeautifulSoup as web
 import subprocess
 import webbrowser
 import argparse
-
+import tkinter as ui
+import ctypes
 
 
 # pyinstaller --onefile blpd.py 
-
-os.environ["EXECJS_RUNTIME"] = "Node"
 
 # Verifica se o arquivo "index.tea" existe
 arquivo_index = "index.tea"
@@ -45,69 +36,6 @@ def runCode(filename):
         content = file.read()
         exec(content)
 
-@njit
-def extender(origem, arquivo):
-    # Defina o nome para a cópia do arquivo
-    arquivo_copia = arquivo.replace('.', '_temp.')
-
-    if origem == 'web':
-        # Baixe o arquivo da web e crie a cópia
-        response = requests.get(arquivo)
-        
-        if response.status_code == 200:
-            with open(arquivo_copia, 'w') as file:
-                file.write(response.text)
-        else:
-            print("Failed to get the file from the web:", response.status_code)
-            return
-
-    elif origem == 'local':
-        # Verifique se o arquivo local existe
-        if not os.path.exists(arquivo):
-            print("Local file not found")
-            return
-
-        # Crie a cópia do arquivo local
-        shutil.copy(arquivo, arquivo_copia)
-
-    else:
-        print("Origin not recognized")
-        return
-
-    # Renomeie a cópia para a extensão .js
-    arquivo_js = arquivo_copia.replace('_temp.', '.')
-    os.rename(arquivo_copia, arquivo_js)
-
-    # Crie um contexto e execute o código JavaScript
-    jsFile = os.open(arquivo_js)
-    jsR = os.read(jsFile)
-    actionEX = jsR.replace("action", "function")
-    echoEX = actionEX.replace("echo(", "console.log(")
-    onreadyEX = echoEX.replace('@onready:', 'if __name__ == "__main__":')
-    getEX = onreadyEX.replace("web.Get(", "requests.get(")
-    postEX = getEX.replace("web.Post(", "requests.post(")
-    httperrorEX = postEX.replace("web.Error(", "requests.HTTPError")
-    strvarEX = req_termEX.replace('.string ', 'var')
-    intvarEX = strvarEX.replace('.int ', 'var')    
-    floatvarEX = intvarEX.replace('.float ', 'var')
-    boolvarEX = floatvarEX.replace('.bool ', 'var')      
-    extendsEX = boolvarEX.replace('extends(', '')    
-    commEX = extendsEX.replace('//', '#')
-    classcfgEX = commEX.replace('class.struct(', '')
-    maybeEX = classcfgEX.replace('maybe', 'else if')
-    skipEX = maybeEX.replace('skip', '//pass it')
-    jitEX = skipEX.replace('@jitpard', '')
-
-    ctx = MiniRacer()
-    ctx.eval(jitEX)
-
-    # Deixe a exclusão do arquivo para ser executada quando o programa for fechado
-    def excluir_arquivo():
-        os.remove(arquivo_js)
-    
-    import atexit
-    atexit.register(excluir_arquivo)
-
 def compil(filename):
     with open(filename, 'r') as file:
         content = file.read()
@@ -122,7 +50,7 @@ def compil(filename):
         intvar = strvar.replace('.int ', '')    
         floatvar = intvar.replace('.float ', '')
         boolvar = floatvar.replace('.bool ', '')      
-        extends = boolvar.replace('extends(', 'extender(')    
+        extends = boolvar.replace('extends(', 'ctypes.CDLL(')    
         comm = extends.replace('//', '#')
         classcfg = comm.replace('class.struct(', 'def __init__(self, ')
         maybe = classcfg.replace('maybe', 'elif')
@@ -166,7 +94,7 @@ def intr(filename):
         intvarIN = strvarIN.replace('.int ', '')    
         floatvarIN = intvarIN.replace('.float ', '')
         boolvarIN = floatvarIN.replace('.bool ', '')      
-        extendsIN = boolvarIN.replace('extends(', 'extender(')    
+        extendsIN = boolvarIN.replace('extends(', 'ctypes.CDLL(')    
         commIN = extendsIN.replace('//', '#')
         classcfgIN = commIN.replace('class.struct(', 'def __init__(self, ')
         maybeIN = classcfgIN.replace('maybe', 'elif')
@@ -234,7 +162,6 @@ else:
     # Se não houver argumentos suficientes passados
     print("The command and/or the second argument are missing")
 
-@njit
 def logger(tipo, mensagem):
     if tipo == 'sucess':
         converted_message = mensagem.translate(str.maketrans(
