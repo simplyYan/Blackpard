@@ -57,6 +57,11 @@ Blackpard has its own IDE, called "Whitepard", which can be used online in the b
 ```
 https://simplyyan.github.io/Whitepard/root/
 ```
+
+## Using Pardpackage to download all the built-in libraries
+You can use the Blackpard package manager to get all the Blackpard (built-in) libraries. To do this, download Pardpackage for Windows (https://raw.githubusercontent.com/simplyYan/Blackpard/main/Pardpackge/prpg.bat) or Linux/macOS (https://raw.githubusercontent.com/simplyYan/Blackpard/main/Pardpackge/prpg.sh), and run the file passing the directory where you want to download the libraries as an argument (it must be where you are developing your Blackpard program).
+
+
 ## Documentation
 You can access the documentation on the Blackpard Pages: https://simplyyan.github.io/Blackpard/
 
