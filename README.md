@@ -28,7 +28,7 @@ On Windows, Blackpard is pre-built and can be downloaded via Google Drive or Med
 On Linux, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
 - Google Drive: https://drive.google.com/drive/folders/1DsU1dZFnXwxQZMNPcUIm2XQPGtoApO3D?usp=sharing
 - Mediafire: https://www.mediafire.com/file/5nam8o96h50bigc/blackpard.zip/file
-(The instructions are already included)
+- (The instructions are already included)
 
 ## Using the compiler
 Once installed, you can always run the compiler with weepsbox, using the command:
