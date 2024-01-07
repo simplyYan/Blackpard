@@ -3,7 +3,7 @@
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
 ## How to install
-- **macOS**:
+### macOS
 Blackpard can be installed using weepsbox, a tool I developed to install and run small, single-file Python packages. First, look at the macOS requirements:
 
 - Python >= 3.8.12
@@ -13,14 +13,12 @@ Blackpard can be installed using weepsbox, a tool I developed to install and run
 - wget and curl
 
 Now, if you have the requirements, just use a command in the terminal to install. Check it out:
-
-- Windows (Powershell only):
 ```
 wget https://raw.githubusercontent.com/simplyYan/weepsbox/main/mac.weepsbox.sh
 chmod 777 mac.weepsbox.sh
 ./mac.weepsbox.sh https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
-- **Windows**:
+### Windows
 Blackpard can be installed using weepsbox, a tool I developed to install and run small, single-file Python packages. First, look at the Windows requirements:
 
 - Python >= 3.8.12
@@ -29,7 +27,7 @@ Now, if you have the requirements, just use a command in the terminal to install
 powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/simplyYan/weepsbox/main/win.weepsbox.bat', 'win.weepsbox.bat')"
 win.weepsbox.bat https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/blackpard.py
 ```
-- **Linux**:
+### Linux
 On Linux, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
 - Google Drive: https://drive.google.com/drive/folders/1DsU1dZFnXwxQZMNPcUIm2XQPGtoApO3D?usp=sharing
 - Mediafire: ???
