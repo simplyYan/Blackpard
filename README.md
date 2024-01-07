@@ -30,7 +30,7 @@ win.weepsbox.bat https://raw.githubusercontent.com/simplyYan/Blackpard/main/SRC/
 ### Linux
 On Linux, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
 - Google Drive: https://drive.google.com/drive/folders/1DsU1dZFnXwxQZMNPcUIm2XQPGtoApO3D?usp=sharing
-- Mediafire: ???
+- Mediafire: https://www.mediafire.com/file/5nam8o96h50bigc/blackpard.zip/file
 
 
 ## Using the compiler
