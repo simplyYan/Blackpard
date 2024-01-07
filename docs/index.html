@@ -126,27 +126,12 @@ action test():
 </div>
 <div id="typography">
   <h3>Working with libraries</h3>
-  <p>As with most languages, you can use external libraries in Blackpard! Well, you can choose to use libraries directly from CDN/Web or download them. If you use libraries downloaded locally, use the "local" argument, if you use them from the web, use the "web" argument. Here's an example:</p>
+  <p>As with most languages, you can use external libraries in Blackpard! You can use built-in libraries, which are native to the language or from the community. Native libraries can be downloaded from Pardpackage, and community libraries can be found on Github. Here's an example, using the CutePard built-in library, which was officially the first Blackpard library:</p>
   <pre><code>
-//Using a web lib
-extends('web', 'yourlib.com/lib.blpd')
-//Using a local lib
-extends('local', 'test.blpd')
-      </code></pre>
-</div>
-<div id="typography">
-  <h3>Calling functions and library values</h3>
-  <p>You can execute functions and get values easily from imported libraries. To do this, simply use the included "base" module. The "base" is already included and activated, just use it. Here's an example:</p>
-  <pre><code>
-//Run a function
-base.Call("hello") //In this example, "hello" would be called
-//Get a value
-base.Ref("yourVar")
-//Advanced example:
-
-// Example lib: var f = function(args) { return args; }
-base.Call("f", datetime.now(), encoder=CustomEncoder)
-// '2017-03-31T16:51:02.474118'
+//Importing the library
+extends('libs/CutePard.c')
+//Now I can call any function in the library. CutePard is a test library and has only one function
+CallCute()
       </code></pre>
 </div>
 <div id="typography">
