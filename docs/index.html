@@ -14,7 +14,29 @@
   </div>
 <!-- partial:index.partial.html -->
 <nav>
-  
+  <script>
+function verificarDispositivoMovel() {
+  // Verifica se o user agent indica um dispositivo móvel
+  const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    // Se for um dispositivo móvel, exibe um aviso
+    alert("Both the site and the Blackpard language are dedicated to the desktop")
+
+    // Tenta fechar a aba (não garantido em todos os navegadores)
+    if (window.close) {
+      window.close();
+    } else {
+      console.log("Não foi possível fechar a aba neste navegador.");
+    }
+  } else {
+    console.log("Este site está sendo acessado de um computador.");
+  }
+}
+
+// Chamada da função para verificar se está em um dispositivo móvel
+verificarDispositivoMovel();
+  </script>
   <a href="#" style="color: white;"><p class="sitename">Blackpard</p></a>
   <a href="https://simplyyan.github.io/Blackpard/docs" style="color: white;"><p class="menu">Docs</p></a>
   <a href="https://github.com/simplyYan/Blackpard#how-to-install" style="color: white;"><p class="menu">Install</p></a>
