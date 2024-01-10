@@ -1,6 +1,7 @@
 ![Blackpard Lang](https://raw.githubusercontent.com/simplyYan/Blackpard/main/Banner.png)
 
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
+HERE'S AN EXAMPLE USING BLACKPARD'S **LOW LEVEL**:
 ```
 st = extends('./simple_time.so')  //Importing built-in libraries
 lib = extends('./pvm.so')
@@ -40,6 +41,17 @@ echo("Time elapsed:", elapsed_time, "seconds")
 //Results in other languages: Go = 527.819202ms, JS = 1650ms,
 //C++ = 2790ms, C = 1.489798s, Rust = 1048ms, Swift = 694.388
 //Ruby = 14356.714772ms, Pascal = 1087, 
+```
+Blackpard's low level may be a little more difficult, but it's faster. Blackpard's low level is provided by primitive libraries such as "simple_time" and "PardVM". Now take a look at a high-level example:
+```
+action execFib():
+  fib = extends("./fibonacci.so")
+  fib.main() //Result: The 55th term of the Fibonacci sequence is: 139583862445
+
+echo("Running Fibonacci...")
+execFib() //Execution time: 0.000002
+//This Fibonacci is faster because it uses Blackpard's "fibonacci" standard library,
+//which is written entirely in C and uses advanced techniques such as memoize;
 ```
 
 ## How to install
