@@ -2,10 +2,44 @@
 
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 ```
-fib = extends("./fibonacci.so")
+st = extends('./simple_time.so')  //Importing built-in libraries
+lib = extends('./pvm.so')
+//WARNING: In Windows it is DLL not OS. On Linux and macOS it's .so
 
-fib.main() //Result: The 55th term of the Fibonacci sequence is: 139583862445
-//Execution time: 0.000002 seconds
+lib.pvm.argtypes = [ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_int), ctypes.c_int]
+lib.pvm.restype = ctypes.c_int
+
+//Defines function return types
+st.c_start_timer.restype = None
+st.c_elapsed_time.restype = ctypes.c_double
+
+//Calls the function to start the timer
+st.c_start_timer()
+
+@ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_int)
+action fibonacci(n):
+    fib_sequence = []
+    .string a, b = 0, 1
+    for _ in range(n):
+        fib_sequence.append(a)
+        a, b = b, a + b
+    return fib_sequence
+
+//Example: generating the first 55 numbers of the Fibonacci sequence
+.string result = lib.pvm(fibonacci, 55)
+print("Result from memoized cache:", result)
+
+echo(f"The first 55 numbers in the Fibonacci sequence are: {result}")
+//Calculates elapsed time
+.float elapsed_time = st.c_elapsed_time()
+echo("Time elapsed:", elapsed_time, "seconds")
+
+//Output: The first 55 numbers in the Fibonacci sequence are: 8618016
+//Time elapsed: 7.9e-05 seconds (79 microseconds)
+//The test was carried out in Parrot OS (Linux) on an i7 3770.
+//Results in other languages: Go = 527.819202ms, JS = 1650ms,
+//C++ = 2790ms, C = 1.489798s, Rust = 1048ms, Swift = 694.388
+//Ruby = 14356.714772ms, Pascal = 1087, 
 ```
 
 ## How to install
