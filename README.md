@@ -49,7 +49,7 @@ echo("Time elapsed:", elapsed_time, "seconds")
 //The test was carried out in Parrot OS (Linux) on an i7 3770.
 //Results in other languages: Go = 527.819202ms, JS = 1650ms,
 //C++ = 2790ms, C = 1.489798s, Rust = 1048ms, Swift = 694.388
-//Ruby = 14356.714772ms, Pascal = 1087, 
+//Ruby = 14356.714772ms, Pascal = 1087ms
 ```
 Blackpard's low level may be a little more difficult, but it's faster. Blackpard's low level is provided by primitive libraries such as "simple_time" and "PardVM". Now take a look at a high-level example:
 ```
