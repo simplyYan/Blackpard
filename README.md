@@ -1,6 +1,12 @@
 ![Blackpard Lang](https://raw.githubusercontent.com/simplyYan/Blackpard/main/Banner.png)
 
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
+```
+fib = extends("./fibonacci.so")
+
+fib.main() //Result: The 55th term of the Fibonacci sequence is: 139583862445
+//Execution time: 0.000002 seconds
+```
 
 ## How to install
 ### macOS
