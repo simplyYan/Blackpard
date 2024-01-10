@@ -145,9 +145,9 @@ Here is a practical example demonstrating how to use PVM in Blackpard to acceler
   <pre><code>
 //Load the built-in library
 if ctypes.sizeof(ctypes.c_voidp) == 8:
-    lib = extends('./libmemoize.so')  //Linux
+    lib = extends('./pvm.so')  //Linux
 else:
-    lib = extends('./memoize.dll')   //Windows
+    lib = extends('./pvm.dll')   //Windows
 
 //Define argument and return types for the pvm function
 lib.pvm.argtypes = [ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_int), ctypes.c_int]
