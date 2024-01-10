@@ -143,35 +143,33 @@ PVM offers a single main function, pvm, which can be used to memoize any Blackpa
 Here is a practical example demonstrating how to use PVM in Blackpard to accelerate a function:    
   </p>
   <pre><code>
-import ctypes
-
-# Load the built-in library
+//Load the built-in library
 if ctypes.sizeof(ctypes.c_voidp) == 8:
-    lib = ctypes.CDLL('./libmemoize.so')  # Linux
+    lib = extends('./libmemoize.so')  //Linux
 else:
-    lib = ctypes.CDLL('./memoize.dll')   # Windows
+    lib = extends('./memoize.dll')   //Windows
 
-# Define argument and return types for the pvm function
+//Define argument and return types for the pvm function
 lib.pvm.argtypes = [ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_int), ctypes.c_int]
 lib.pvm.restype = ctypes.c_int
 
-# Blackpard function to be memoized
-def example_function(x):
-    print("Calculating result for:", x)
+//Blackpard function to be memoized
+action example_function(x):
+    echo("Calculating result for:", x)
     return x * x
 
-# Convert the Blackpard function to a type understandable by ctypes
+//Convert the Blackpard function to a type understandable by ctypes
 @ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_int)
-def wrapped_example_function(x):
+action wrapped_example_function(x):
     return example_function(x)
 
-# Call the pvm function to memoize the Blackpard function
+//Call the pvm function to memoize the Blackpard function
 memoized_result = lib.pvm(wrapped_example_function, 5)
-print("Result of memoized function call:", memoized_result)
+echo("Result of memoized function call:", memoized_result)
 
-# Call the pvm function again with the same argument
+//Call the pvm function again with the same argument
 memoized_result_again = lib.pvm(wrapped_example_function, 5)
-print("Result from memoized cache:", memoized_result_again)
+echo("Result from memoized cache:", memoized_result_again)
 
       </code></pre>
 <p>
