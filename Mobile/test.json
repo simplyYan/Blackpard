@@ -4,6 +4,6 @@
       "age": 30,
       "city": "Example City"
     },
-    "Code": "alert('Hello from the JSON Code!');"
+    "Code": ".string name = 'Josh'\n action test():\n echo('Hello') \n ::"
   }
   
