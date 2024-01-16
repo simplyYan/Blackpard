@@ -1,13 +1,13 @@
 ![Blackpard Lang](https://raw.githubusercontent.com/simplyYan/Blackpard/main/Banner.png)
 
 - Index: 1. [How to install](https://github.com/simplyYan/Blackpard#how-to-install)
-       2. [Using the compiler](https://github.com/simplyYan/Blackpard#how-to-install)
-       3. [IDE](https://github.com/simplyYan/Blackpard#how-to-install)
+       2. [Using the compiler](https://github.com/simplyYan/Blackpard#using-the-compiler)
+       3. [IDE](https://github.com/simplyYan/Blackpard#ide)
        4. [Using Pardpackage](https://github.com/simplyYan/Blackpard#how-to-install)
-       5. [Docs](https://github.com/simplyYan/Blackpard#how-to-install)
-       6. [Features](https://github.com/simplyYan/Blackpard#how-to-install)
-       7. [License](https://github.com/simplyYan/Blackpard#how-to-install)
-       8. [Contribute](https://github.com/simplyYan/Blackpard#how-to-install)
+       5. [Docs](https://github.com/simplyYan/Blackpard#documentation)
+       6. [Features](https://github.com/simplyYan/Blackpard#main-features)
+       7. [License](https://github.com/simplyYan/Blackpard#license)
+       8. [Contribute](https://github.com/simplyYan/Blackpard#contribute)
 
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 HERE'S AN EXAMPLE USING BLACKPARD'S **LOW LEVEL**:
@@ -91,6 +91,11 @@ On Linux, Blackpard is pre-built and can be downloaded via Google Drive or Media
 - Mediafire: https://www.mediafire.com/file/5nam8o96h50bigc/blackpard.zip/file
 - (The instructions are already included)
 
+### Android
+On Android, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
+- Google Drive: https://drive.google.com/drive/folders/1ompa9kny0an_Rki3XkjRCqU4yzUqJPwy?usp=drive_link
+- Mediafire: https://www.mediafire.com/file/1sejbs2w88bj5y8/Blackpard.apk/file
+
 ## Using the compiler
 ### macOS
 Once installed, you can always run the compiler with weepsbox, using the command:
@@ -121,6 +126,9 @@ https://simplyyan.github.io/Whitepard/root/
 
 ## Using Pardpackage to download all the built-in libraries
 You can use the Blackpard package manager to get all the Blackpard (built-in) libraries. To do this, download Pardpackage for Windows (https://raw.githubusercontent.com/simplyYan/Blackpard/main/Pardpackge/prpg.bat) or Linux/macOS (https://raw.githubusercontent.com/simplyYan/Blackpard/main/Pardpackge/prpg.sh), and run the file passing the directory where you want to download the libraries as an argument (it must be where you are developing your Blackpard program).
+
+## Documentation for Android Version
+The documentation for the Android version is available on the Wiki of this repository. There, it mentions the differences (there are only a few minor differences), but you can learn Blackpard from the main documentation on the website.
 
 
 ## Documentation
