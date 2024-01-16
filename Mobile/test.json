@@ -1,0 +1,9 @@
+{
+    "Data": {
+      "name": "John Doe",
+      "age": 30,
+      "city": "Example City"
+    },
+    "Code": "alert('Hello from the JSON Code!');"
+  }
+  
