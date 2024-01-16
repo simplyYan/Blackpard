@@ -136,7 +136,7 @@ You can access the documentation on the Blackpard Pages: https://simplyyan.githu
 
 ## Main features:
 
-- Cross-platform: Our language is compatible with Windows, Linux and macOS;
+- Cross-platform: Our language is compatible with Windows, Linux, macOS and Android;
 
 - Runs on a VM: Blackpard runs entirely on BlackpardVM, the language's virtual machine. Using the Blackpard language, you can manipulate everything from BlackpardVM, which is almost an operating system. You can manipulate files, the terminal, and much more.
 
