@@ -3,11 +3,10 @@
 - Index: 1. [How to install](https://github.com/simplyYan/Blackpard#how-to-install)
        2. [Using the compiler](https://github.com/simplyYan/Blackpard#using-the-compiler)
        3. [IDE](https://github.com/simplyYan/Blackpard#ide)
-       4. [Using Pardpackage](https://github.com/simplyYan/Blackpard#how-to-install)
-       5. [Docs](https://github.com/simplyYan/Blackpard#documentation)
-       6. [Features](https://github.com/simplyYan/Blackpard#main-features)
-       7. [License](https://github.com/simplyYan/Blackpard#license)
-       8. [Contribute](https://github.com/simplyYan/Blackpard#contribute)
+       4. [Docs](https://github.com/simplyYan/Blackpard#documentation)
+       5. [Features](https://github.com/simplyYan/Blackpard#main-features)
+       6. [License](https://github.com/simplyYan/Blackpard#license)
+       7. [Contribute](https://github.com/simplyYan/Blackpard#contribute)
 
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
 
