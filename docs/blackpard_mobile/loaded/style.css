@@ -1,0 +1,88 @@
+html, body, body * {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #111111;
+}
+
+body *::selection {
+	color: black;
+	background: white;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100vw;
+	height: 100vh
+}
+
+#terminal {
+	box-shadow: 4px 4px 15px rgba(42, 253, 0, 0.25);
+	border-radius: 3px;
+}
+
+#terminal-titlebar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	height: 24px;
+	
+	font-family: Open Sans, Segoe UI, Calibri, sans-serif;
+	font-size: 11px;
+	color: black;
+	
+	backdrop-filter: invert(0.2) saturate(150%);
+	
+	border-radius: 3px 3px 0px 0px
+}
+
+#terminal-body {
+	padding: 5px;
+	
+	flex-shrink: auto;
+	
+	width: 560px;
+	max-width: 560px;
+	height: 250px;
+	max-height: 250px;
+	
+	font-family: Inconsolata, monospace;
+	font-size: 14px;
+	color: #dddddd;
+	
+	background-color: #111111;
+	
+	border-radius: 0px 0px 3px 3px;
+	
+	overflow-y: scroll;
+}
+
+#commandline {
+	display: flex;
+	flex-direction: row;
+	
+	color: inherit;
+}
+
+.posted {
+	color: inherit;
+}
+
+.prompt {
+	display: inline-block;
+	flex-grow: 1;
+	
+	border: none;
+	outline: none;
+	
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: inherit;
+}
