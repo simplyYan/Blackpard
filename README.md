@@ -13,7 +13,7 @@ Blackpard is a high-level compiled language that is fast, light, easy, secure an
 ## How to install
 ### macOS
 On macOS, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
-- Google Drive: https://drive.google.com/drive/folders/1t58SoeDt2-m2A0PzZpx_1wkCsmN23cOe?usp=sharing
+- Google Drive: https://drive.google.com/drive/folders/1GTAW29HjvO7SNosPYpx9zYyfy2g3HzO8?usp=sharing
   
 ### Windows
 On Windows, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
