@@ -8,7 +8,7 @@
        6. [License](https://github.com/simplyYan/Blackpard#license)
        7. [Contribute](https://github.com/simplyYan/Blackpard#contribute)
 
-Blackpard is a high-level compiled language that is fast, light, easy, secure and broad.
+Blackpard is a high-level compiled language that is fast, light, easy, secure and broad. Blackpard runs on a compiler based on the V8 engine, and has its own virtual machine. The language was developed with WebAssembly, NodeJS and JavaScript. It can be used for both back-end and front-end.
 
 ## How to install
 ### macOS
