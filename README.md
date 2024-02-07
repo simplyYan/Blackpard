@@ -14,17 +14,18 @@ Blackpard is a high-level compiled language that is fast, light, easy, secure an
 ### macOS
 On macOS, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
 - Google Drive: https://drive.google.com/drive/folders/1GTAW29HjvO7SNosPYpx9zYyfy2g3HzO8?usp=sharing
+- Mediafire: https://www.mediafire.com/folder/9ux4rd356zzg5/Blackpard
   
 ### Windows
 On Windows, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
 - Google Drive: https://drive.google.com/drive/folders/1t58SoeDt2-m2A0PzZpx_1wkCsmN23cOe?usp=sharing
-- Mediafire: https://www.mediafire.com/file/vjsnp1zrdux8jkj/blackpard_win.zip/file
+- Mediafire: https://www.mediafire.com/folder/9ux4rd356zzg5/Blackpard
 - Instructions: https://github.com/simplyYan/Blackpard/blob/main/windows_instructions
 
 ### Linux
 On Linux, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
 - Google Drive: https://drive.google.com/drive/folders/1DsU1dZFnXwxQZMNPcUIm2XQPGtoApO3D?usp=sharing
-- Mediafire: https://www.mediafire.com/file/5nam8o96h50bigc/blackpard.zip/file
+- Mediafire: https://www.mediafire.com/folder/9ux4rd356zzg5/Blackpard
 - (The instructions are already included)
 
 ### Android
