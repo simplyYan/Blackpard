@@ -117,6 +117,19 @@ document.body.appendChild(usingIt);
 
 }
 
+function TargetFile(usingUrl) {
+  var usingIt = document.createElement('script');
+  
+  usingIt.src = usingUrl;
+  
+  document.body.appendChild(usingIt);
+  
+  }
+
+function AppTitle(title) {
+  document.title = title;
+}
+
 function action(actionName, actionBody) {
     if (typeof actionName !== 'string' || typeof actionBody !== 'string') {
       throw new Error('Por favor, forneça uma string como nome e uma string como corpo da função.');
@@ -381,3 +394,110 @@ var strategies = {
   variadic: strategyVariadic,
   monadic: strategyMonadic
 };
+
+function Arg(typ, name) {
+  window[name] = null;
+}
+
+class MemoryManager {
+  constructor() {
+    this.allocatedMemory = [];
+  }
+
+  allocate(size) {
+    const memory = new Array(size).fill(0); // Simulação de alocação de memória
+    const handle = this.generateHandle();
+    this.allocatedMemory.push({ handle, memory });
+    return handle;
+  }
+
+  free(handle) {
+    const index = this.allocatedMemory.findIndex(entry => entry.handle === handle);
+    if (index !== -1) {
+      this.allocatedMemory.splice(index, 1);
+      console.log(`Memory with handle ${handle} freed.`);
+    } else {
+      console.error(`Invalid handle: ${handle}`);
+    }
+  }
+
+  readInt(handle, offset) {
+    const entry = this.allocatedMemory.find(entry => entry.handle === handle);
+
+    if (entry) {
+      const { memory } = entry;
+      return memory[offset];
+    } else {
+      console.error(`Invalid handle: ${handle}`);
+    }
+  }
+
+  writeInt(handle, offset, value) {
+    const entry = this.allocatedMemory.find(entry => entry.handle === handle);
+
+    if (entry) {
+      const { memory } = entry;
+      memory[offset] = value;
+      console.log(`Integer ${value} written to memory with handle ${handle}.`);
+    } else {
+      console.error(`Invalid handle: ${handle}`);
+    }
+  }
+
+  readFloat(handle, offset) {
+    const entry = this.allocatedMemory.find(entry => entry.handle === handle);
+
+    if (entry) {
+      const { memory } = entry;
+      // Simulação: converta bytes de volta para float
+      return parseFloat(memory[offset]);
+    } else {
+      console.error(`Invalid handle: ${handle}`);
+    }
+  }
+
+  writeFloat(handle, offset, value) {
+    const entry = this.allocatedMemory.find(entry => entry.handle === handle);
+
+    if (entry) {
+      const { memory } = entry;
+      // Simulação: converta float para bytes
+      memory[offset] = value.toString();
+      console.log(`Float ${value} written to memory with handle ${handle}.`);
+    } else {
+      console.error(`Invalid handle: ${handle}`);
+    }
+  }
+
+  readString(handle, offset, length) {
+    const entry = this.allocatedMemory.find(entry => entry.handle === handle);
+
+    if (entry) {
+      const { memory } = entry;
+      // Simulação: decodifique bytes de volta para string
+      return memory.slice(offset, offset + length).map(byte => String.fromCharCode(byte)).join('');
+    } else {
+      console.error(`Invalid handle: ${handle}`);
+    }
+  }
+
+  writeString(handle, offset, value) {
+    const entry = this.allocatedMemory.find(entry => entry.handle === handle);
+
+    if (entry) {
+      const { memory } = entry;
+      // Simulação: converta string para bytes
+      for (let i = 0; i < value.length; i++) {
+        memory[offset + i] = value.charCodeAt(i);
+      }
+      console.log(`String "${value}" written to memory with handle ${handle}.`);
+    } else {
+      console.error(`Invalid handle: ${handle}`);
+    }
+  }
+
+  generateHandle() {
+    return Math.random().toString(36).substring(7);
+  }
+}
+
