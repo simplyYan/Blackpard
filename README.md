@@ -11,6 +11,7 @@
 Blackpard is a high-level compiled language that is fast, light, easy, secure and broad. Blackpard runs on a compiler based on the V8 engine, and has its own virtual machine. The language was developed with WebAssembly, NodeJS and JavaScript. It can be used for both back-end and front-end.
 
 ## How to install
+(Mediafire temporarily unavailable)
 ### macOS
 On macOS, Blackpard is pre-built and can be downloaded via Google Drive or Mediafire. Download from the mirrors:
 - Google Drive: https://drive.google.com/drive/folders/1GTAW29HjvO7SNosPYpx9zYyfy2g3HzO8?usp=sharing
