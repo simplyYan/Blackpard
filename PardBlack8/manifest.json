@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "PardBlack8",
+    "version": "1.0",
+    "description": "Blackpard Compiler Extension",
+    "permissions": [
+      "cookies",
+      "tabs",
+      "management",
+      "system.cpu",
+      "browsingData",
+      "system.storage",
+      "background"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    
+    },
+    "permissions": [
+      "management",
+      "system.cpu",
+      "tabs",
+      "windows"
+    ]
+  }
+  
